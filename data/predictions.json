@@ -97,10 +97,16 @@
         0
       ],
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          1,
+          0
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          2,
+          0
+        ],
         "Tadlik": [
           3,
           0
@@ -119,10 +125,16 @@
         1
       ],
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          2,
+          2
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          1,
+          1
+        ],
         "Tadlik": [
           1,
           1
@@ -138,10 +150,16 @@
       "away": "BOS",
       "result": null,
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          2,
+          1
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          1,
+          2
+        ],
         "Tadlik": [
           0,
           0
@@ -157,10 +175,16 @@
       "away": "PAR",
       "result": null,
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          0,
+          2
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          1,
+          0
+        ],
         "Tadlik": [
           2,
           1
@@ -176,10 +200,16 @@
       "away": "SUI",
       "result": null,
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          0,
+          3
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          0,
+          2
+        ],
         "Tadlik": [
           0,
           3
@@ -195,10 +225,16 @@
       "away": "MAR",
       "result": null,
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          2,
+          3
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          1,
+          1
+        ],
         "Tadlik": [
           2,
           1
@@ -214,10 +250,16 @@
       "away": "SCO",
       "result": null,
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          0,
+          3
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          1,
+          0
+        ],
         "Tadlik": [
           0,
           3
@@ -233,10 +275,16 @@
       "away": "TUR",
       "result": null,
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          1,
+          2
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          1,
+          0
+        ],
         "Tadlik": [
           0,
           1
@@ -252,10 +300,16 @@
       "away": "CUR",
       "result": null,
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          2,
+          0
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          3,
+          0
+        ],
         "Tadlik": [
           3,
           0
@@ -271,10 +325,16 @@
       "away": "JAP",
       "result": null,
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          2,
+          1
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          2,
+          2
+        ],
         "Tadlik": [
           1,
           0
@@ -290,10 +350,16 @@
       "away": "ECU",
       "result": null,
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          0,
+          2
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          1,
+          2
+        ],
         "Tadlik": [
           0,
           1
@@ -309,10 +375,16 @@
       "away": "TUN",
       "result": null,
       "predictions": {
-        "Oliver": null,
+        "Oliver": [
+          1,
+          1
+        ],
         "Cem": null,
         "Dad": null,
-        "Shaun": null,
+        "Shaun": [
+          0,
+          1
+        ],
         "Tadlik": [
           2,
           0

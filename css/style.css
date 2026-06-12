@@ -419,10 +419,8 @@ main { width: 100%; }
 .bonus-score-pts { font-weight: 500; color: var(--accent); }
 .bonus-score-na  { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 1px; }
 
-/* ── Footer ─────────────────────────────────────────── */
-.site-footer {
-  border-top: 1px solid var(--rule);
-  padding-top: 24px;
+.created-by {
+  margin-top: 20px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   letter-spacing: 0.5px;
