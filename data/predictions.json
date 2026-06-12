@@ -113,7 +113,7 @@
         ],
         "Claude": [
           2,
-          0
+          1
         ]
       }
     },
@@ -143,7 +143,7 @@
           1
         ],
         "Claude": [
-          2,
+          1,
           1
         ]
       }
@@ -434,10 +434,7 @@
       "group": "G",
       "home": "BEL",
       "away": "EGY",
-      "result": [
-        2,
-        0
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           1,
@@ -451,7 +448,10 @@
           3,
           0
         ],
-        "Shaun": null,
+        "Shaun": [
+          2,
+          0
+        ],
         "Tadlik": [
           2,
           0
@@ -468,10 +468,7 @@
       "group": "G",
       "home": "IRN",
       "away": "NZL",
-      "result": [
-        1,
-        1
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           1,
@@ -485,7 +482,10 @@
           0,
           2
         ],
-        "Shaun": null,
+        "Shaun": [
+          1,
+          1
+        ],
         "Tadlik": [
           1,
           0
@@ -502,10 +502,7 @@
       "group": "H",
       "home": "SPA",
       "away": "CAP",
-      "result": [
-        4,
-        0
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           4,
@@ -519,7 +516,10 @@
           3,
           0
         ],
-        "Shaun": null,
+        "Shaun": [
+          4,
+          0
+        ],
         "Tadlik": [
           3,
           0
@@ -536,10 +536,7 @@
       "group": "H",
       "home": "SAU",
       "away": "URY",
-      "result": [
-        0,
-        2
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           0,
@@ -553,7 +550,10 @@
           0,
           0
         ],
-        "Shaun": null,
+        "Shaun": [
+          0,
+          2
+        ],
         "Tadlik": [
           0,
           2
@@ -570,10 +570,7 @@
       "group": "I",
       "home": "FRA",
       "away": "SEN",
-      "result": [
-        1,
-        0
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           1,
@@ -587,7 +584,10 @@
           2,
           0
         ],
-        "Shaun": null,
+        "Shaun": [
+          1,
+          0
+        ],
         "Tadlik": [
           3,
           0
@@ -604,10 +604,7 @@
       "group": "I",
       "home": "IRA",
       "away": "NOR",
-      "result": [
-        0,
-        1
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           1,
@@ -621,7 +618,10 @@
           1,
           1
         ],
-        "Shaun": null,
+        "Shaun": [
+          0,
+          1
+        ],
         "Tadlik": [
           1,
           2
@@ -638,10 +638,7 @@
       "group": "J",
       "home": "ARG",
       "away": "ALG",
-      "result": [
-        3,
-        0
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           1,
@@ -655,7 +652,10 @@
           3,
           0
         ],
-        "Shaun": null,
+        "Shaun": [
+          3,
+          0
+        ],
         "Tadlik": [
           2,
           0
@@ -672,10 +672,7 @@
       "group": "J",
       "home": "AUR",
       "away": "JOR",
-      "result": [
-        1,
-        0
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           2,
@@ -689,7 +686,10 @@
           1,
           1
         ],
-        "Shaun": null,
+        "Shaun": [
+          1,
+          0
+        ],
         "Tadlik": [
           1,
           0
@@ -706,10 +706,7 @@
       "group": "K",
       "home": "POR",
       "away": "CON",
-      "result": [
-        2,
-        1
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           4,
@@ -723,7 +720,10 @@
           3,
           1
         ],
-        "Shaun": null,
+        "Shaun": [
+          2,
+          1
+        ],
         "Tadlik": [
           2,
           0
@@ -740,10 +740,7 @@
       "group": "K",
       "home": "UZB",
       "away": "COL",
-      "result": [
-        1,
-        1
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           0,
@@ -757,7 +754,10 @@
           0,
           0
         ],
-        "Shaun": null,
+        "Shaun": [
+          1,
+          1
+        ],
         "Tadlik": [
           0,
           2
@@ -774,10 +774,7 @@
       "group": "L",
       "home": "ENG",
       "away": "CRO",
-      "result": [
-        1,
-        0
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           2,
@@ -791,7 +788,10 @@
           0,
           1
         ],
-        "Shaun": null,
+        "Shaun": [
+          1,
+          0
+        ],
         "Tadlik": [
           1,
           2
@@ -808,10 +808,7 @@
       "group": "L",
       "home": "GHA",
       "away": "PAN",
-      "result": [
-        2,
-        0
-      ],
+      "result": null,
       "predictions": {
         "Oliver": [
           1,
@@ -825,7 +822,10 @@
           1,
           1
         ],
-        "Shaun": null,
+        "Shaun": [
+          2,
+          0
+        ],
         "Tadlik": [
           1,
           0
