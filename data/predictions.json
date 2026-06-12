@@ -154,7 +154,10 @@
       "group": "B",
       "home": "CAN",
       "away": "BOS",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": [
           2,
