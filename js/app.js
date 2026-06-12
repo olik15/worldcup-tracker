@@ -6,7 +6,7 @@ async function init() {
     data = await res.json();
   } catch (e) {
     document.querySelector('main').innerHTML =
-      '<p style="color:#f85149;padding:32px;text-align:center">⚠️ Could not load data. Open via an HTTP server, not file://</p>';
+      '<p style="padding:32px;color:#902020;font-family:\'JetBrains Mono\',monospace;font-size:12px">⚠ Could not load data. Open via an HTTP server, not file://</p>';
     return;
   }
 
@@ -50,127 +50,124 @@ function calcTotals(data) {
   }));
 }
 
-/* ── Leaderboard ─────────────────────────────────────── */
+/* ── Leaderboard ────────────────────────────────────── */
 function renderLeaderboard(data) {
   const totals = calcTotals(data);
   const sorted = [...data.players].sort((a, b) => totals[b.id].total - totals[a.id].total);
-  const medals = ['🥇', '🥈', '🥉'];
+  const medals = ['01', '02', '03', '04', '05'];
   const played = data.matches.filter(m => m.result).length;
 
   let html = `<table class="lb-table">
     <thead><tr>
-      <th>#</th><th>Player</th>
-      <th>Match Pts</th><th>Bonus Pts</th><th>Total</th>
+      <th></th><th>Player</th>
+      <th>Matches</th><th>Bonus</th><th style="text-align:right">Total</th>
     </tr></thead><tbody>`;
 
   sorted.forEach(({ id }, i) => {
     const { mp, bp, total } = totals[id];
-    const rank = i + 1;
-    const medal = medals[i] ?? rank;
-    const bpDisplay = bp !== null && bp !== undefined ? bp : '—';
+    const bpStr = bp !== null && bp !== undefined ? bp : '—';
     html += `<tr>
-      <td class="lb-rank">${medal}</td>
+      <td class="lb-rank">${medals[i]}</td>
       <td class="lb-name">${id}</td>
-      <td>${mp}</td>
-      <td class="lb-sub">${bpDisplay}</td>
+      <td class="lb-sub">${mp} pts</td>
+      <td class="lb-sub">${bpStr}</td>
       <td class="lb-total">${total}</td>
     </tr>`;
   });
 
   html += `</tbody></table>
-    <p class="status-line">${played} / ${data.matches.length} matches played</p>`;
+    <p class="status-line">${played} of ${data.matches.length} matches played</p>`;
   document.getElementById('leaderboard').innerHTML = html;
 }
 
-/* ── Matches ─────────────────────────────────────────── */
+/* ── Matches ────────────────────────────────────────── */
 function renderMatches(data) {
-  const groups = [...new Set(data.matches.map(m => m.group))];
   let html = '';
+  let idx = 0;
 
-  groups.forEach(g => {
-    html += `<div class="group-section"><div class="group-label">Group ${g}</div>`;
-    data.matches.filter(m => m.group === g).forEach(match => {
-      const r = match.result;
-      const scoreTxt = r ? `${r[0]} – ${r[1]}` : 'TBD';
-      const scoreClass = r ? 'match-score' : 'match-score tbd';
-      const homeName = data.teams[match.home] ?? match.home;
-      const awayName = data.teams[match.away] ?? match.away;
+  data.matches.forEach(match => {
+    idx++;
+    const r = match.result;
+    const num = String(idx).padStart(2, '0');
+    const scoreTxt = r ? `${r[0]} – ${r[1]}` : 'TBD';
+    const scoreClass = r ? 'match-score' : 'match-score tbd';
+    const home = data.teams[match.home] ?? match.home;
+    const away = data.teams[match.away] ?? match.away;
 
-      html += `<div class="match-card">
+    html += `<div class="match-row">
+      <div class="match-num">G${match.group}<br>${num}</div>
+      <div>
         <div class="match-header">
-          <div class="team-home">
-            <div class="team-name">${homeName}</div>
-            <div class="team-code">${match.home}</div>
-          </div>
-          <div class="${scoreClass}">${scoreTxt}</div>
-          <div class="team-away">
-            <div class="team-name">${awayName}</div>
-            <div class="team-code">${match.away}</div>
-          </div>
+          <span class="team-name">${home}</span>
+          <span class="match-vs">vs</span>
+          <span class="team-name">${away}</span>
+          <span class="${scoreClass}">${scoreTxt}</span>
         </div>
         <div class="preds-row">`;
 
-      data.players.forEach(({ id }) => {
-        const pred = match.predictions[id];
-        if (!pred) {
-          html += `<div class="pred-cell">
-            <div class="pred-player">${id}</div>
-            <div class="pred-val c-null">TBD</div>
-          </div>`;
-          return;
-        }
-        const pts = matchPts(match, id);
-        let cls = 'c-pending', badge = '';
-        if (pts === 3) { cls = 'c-exact';   badge = `<div class="pred-pts c-exact">+3 ⭐</div>`; }
-        else if (pts === 1) { cls = 'c-correct'; badge = `<div class="pred-pts c-correct">+1 ✓</div>`; }
-        else if (pts === 0) { cls = 'c-wrong';   badge = `<div class="pred-pts c-wrong">+0 ✗</div>`; }
-
+    data.players.forEach(({ id }) => {
+      const pred = match.predictions[id];
+      if (!pred) {
         html += `<div class="pred-cell">
           <div class="pred-player">${id}</div>
-          <div class="pred-val ${cls}">${pred[0]}–${pred[1]}</div>
-          ${badge}
+          <div class="pred-val c-null">—</div>
         </div>`;
-      });
+        return;
+      }
+      const pts = matchPts(match, id);
+      let cls = 'c-pending', badge = '';
+      if (pts === 3)      { cls = 'c-exact';   badge = `<div class="pred-pts pts-exact">+3</div>`; }
+      else if (pts === 1) { cls = 'c-correct'; badge = `<div class="pred-pts pts-correct">+1</div>`; }
+      else if (pts === 0) { cls = 'c-wrong';   badge = `<div class="pred-pts pts-wrong">+0</div>`; }
 
-      html += `</div></div>`;
+      html += `<div class="pred-cell">
+        <div class="pred-player">${id}</div>
+        <div class="pred-val ${cls}">${pred[0]}–${pred[1]}</div>
+        ${badge}
+      </div>`;
     });
-    html += '</div>';
+
+    html += `</div></div></div>`;
   });
 
   document.getElementById('matches').innerHTML = html;
 }
 
-/* ── Bonus ───────────────────────────────────────────── */
+/* ── Bonus ──────────────────────────────────────────── */
 function renderBonus(data) {
-  let html = '<div class="bonus-grid">';
+  let html = '';
 
-  data.bonus.questions.forEach(({ id, label }) => {
-    html += `<div class="bonus-card">
-      <div class="bonus-q">${label}</div>
-      <div class="bonus-answers">`;
+  data.bonus.questions.forEach(({ id, label }, i) => {
+    const num = String(i + 1).padStart(2, '0');
+    html += `<div class="bonus-row">
+      <div class="bonus-num">${num}</div>
+      <div>
+        <div class="bonus-q-label">${label}</div>
+        <div class="bonus-answers">`;
+
     data.players.forEach(({ id: pid }) => {
       const ans = data.bonus.predictions[pid]?.[id];
       const val = ans != null
         ? `<span class="bonus-val">${ans}</span>`
-        : `<span class="bonus-null">TBD</span>`;
+        : `<span class="bonus-null">—</span>`;
       html += `<div class="bonus-ans">
         <div class="bonus-player">${pid}</div>
         ${val}
       </div>`;
     });
-    html += `</div></div>`;
+
+    html += `</div></div></div>`;
   });
 
-  html += '</div>';
-
-  html += `<div class="bonus-scores">
-    <div class="bonus-scores-header">Bonus Scores (awarded manually)</div>`;
+  // Bonus scores section
+  html += `<div class="bonus-scores-row">
+    <div class="bonus-scores-title">Bonus scores</div>`;
   data.players.forEach(({ id }) => {
     const score = data.bonus.scores[id];
-    const display = score !== null && score !== undefined
-      ? `<span class="bonus-score-pts">${score} pts</span>`
-      : `<span class="bonus-score-na">—</span>`;
-    html += `<div class="bonus-score-row"><span>${id}</span>${display}</div>`;
+    const pts = score !== null && score !== undefined
+      ? `<span class="bonus-score-pts">${score}</span>`
+      : `<span class="bonus-score-na">TBD</span>`;
+    html += `<div class="bonus-score-item"><span>${id}</span>${pts}</div>`;
   });
   html += '</div>';
 
