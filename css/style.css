@@ -211,6 +211,18 @@ main { width: 100%; }
 }
 
 /* ── Matches ────────────────────────────────────────── */
+.round-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 28px 0 16px;
+  border-top: 1px solid var(--rule);
+  margin-top: 8px;
+}
+.round-header:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+
 .match-row {
   border-top: 1px solid var(--rule);
   padding: 28px 0 24px;

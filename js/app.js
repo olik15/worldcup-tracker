@@ -14,6 +14,9 @@ async function init() {
 
   activeFilters = new Set(_data.players.map(p => p.id));
 
+  const meta = document.getElementById('meta-stats');
+  if (meta) meta.innerHTML = `${_data.players.length} players<br>${_data.matches.length} matches<br>+1 result · +3 exact`;
+
   setupTabs();
   renderFilterBar(_data);
   renderAll();
@@ -121,52 +124,58 @@ function renderLeaderboard(data) {
 /* ── Matches ────────────────────────────────────────── */
 function renderMatches(data) {
   const players = visiblePlayers(data);
+  const rounds = [...new Set(data.matches.map(m => m.round))].sort();
   let html = '';
-  let idx = 0;
 
-  data.matches.forEach(match => {
-    idx++;
-    const r = match.result;
-    const num = String(idx).padStart(2, '0');
-    const scoreTxt = r ? `${r[0]} – ${r[1]}` : 'TBD';
-    const scoreClass = r ? 'match-score' : 'match-score tbd';
-    const home = data.teams[match.home] ?? match.home;
-    const away = data.teams[match.away] ?? match.away;
+  rounds.forEach(round => {
+    const roundMatches = data.matches.filter(m => m.round === round);
+    html += `<div class="round-header">Round ${round}</div>`;
+    let idx = 0;
 
-    html += `<div class="match-row">
-      <div class="match-num">G${match.group}<br>${num}</div>
-      <div>
-        <div class="match-header">
-          <span class="team-name">${home}</span>
-          <span class="match-vs">vs</span>
-          <span class="team-name">${away}</span>
-          <span class="${scoreClass}">${scoreTxt}</span>
-        </div>
-        <div class="preds-row">`;
+    roundMatches.forEach(match => {
+      idx++;
+      const r = match.result;
+      const num = String(idx).padStart(2, '0');
+      const scoreTxt = r ? `${r[0]} – ${r[1]}` : 'TBD';
+      const scoreClass = r ? 'match-score' : 'match-score tbd';
+      const home = data.teams[match.home] ?? match.home;
+      const away = data.teams[match.away] ?? match.away;
 
-    players.forEach(({ id }) => {
-      const pred = match.predictions[id];
-      if (!pred) {
+      html += `<div class="match-row">
+        <div class="match-num">${match.group}${num}</div>
+        <div>
+          <div class="match-header">
+            <span class="team-name">${home}</span>
+            <span class="match-vs">vs</span>
+            <span class="team-name">${away}</span>
+            <span class="${scoreClass}">${scoreTxt}</span>
+          </div>
+          <div class="preds-row">`;
+
+      players.forEach(({ id }) => {
+        const pred = match.predictions[id];
+        if (!pred) {
+          html += `<div class="pred-cell">
+            <div class="pred-player">${id}</div>
+            <div class="pred-val c-null">—</div>
+          </div>`;
+          return;
+        }
+        const pts = matchPts(match, id);
+        let cls = 'c-pending', badge = '';
+        if (pts === 3)      { cls = 'c-exact';   badge = `<div class="pred-pts pts-exact">+3</div>`; }
+        else if (pts === 1) { cls = 'c-correct'; badge = `<div class="pred-pts pts-correct">+1</div>`; }
+        else if (pts === 0) { cls = 'c-wrong';   badge = `<div class="pred-pts pts-wrong">+0</div>`; }
+
         html += `<div class="pred-cell">
           <div class="pred-player">${id}</div>
-          <div class="pred-val c-null">—</div>
+          <div class="pred-val ${cls}">${pred[0]}–${pred[1]}</div>
+          ${badge}
         </div>`;
-        return;
-      }
-      const pts = matchPts(match, id);
-      let cls = 'c-pending', badge = '';
-      if (pts === 3)      { cls = 'c-exact';   badge = `<div class="pred-pts pts-exact">+3</div>`; }
-      else if (pts === 1) { cls = 'c-correct'; badge = `<div class="pred-pts pts-correct">+1</div>`; }
-      else if (pts === 0) { cls = 'c-wrong';   badge = `<div class="pred-pts pts-wrong">+0</div>`; }
+      });
 
-      html += `<div class="pred-cell">
-        <div class="pred-player">${id}</div>
-        <div class="pred-val ${cls}">${pred[0]}–${pred[1]}</div>
-        ${badge}
-      </div>`;
+      html += `</div></div></div>`;
     });
-
-    html += `</div></div></div>`;
   });
 
   document.getElementById('matches').innerHTML = html;
