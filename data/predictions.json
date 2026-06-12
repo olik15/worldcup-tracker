@@ -5,232 +5,1671 @@
     "bonus_scored_manually": true
   },
   "players": [
-    { "id": "Oliver", "color": "#58a6ff" },
-    { "id": "Cem",    "color": "#3fb950" },
-    { "id": "Dad",    "color": "#e3b341" },
-    { "id": "Shaun",  "color": "#bc8cff" },
-    { "id": "Tadlik", "color": "#e05c30" },
-    { "id": "Claude", "color": "#f78166" }
+    {
+      "id": "Oliver",
+      "color": "#58a6ff"
+    },
+    {
+      "id": "Cem",
+      "color": "#3fb950"
+    },
+    {
+      "id": "Dad",
+      "color": "#e3b341"
+    },
+    {
+      "id": "Shaun",
+      "color": "#bc8cff"
+    },
+    {
+      "id": "Tadlik",
+      "color": "#e05c30"
+    },
+    {
+      "id": "Claude",
+      "color": "#f78166"
+    }
   ],
   "teams": {
-    "BEL": "Belgium",      "EGY": "Egypt",
-    "IRN": "Iran",         "NZL": "New Zealand",
-    "SPA": "Spain",        "CAP": "Cape Verde",
-    "SAU": "Saudi Arabia", "URY": "Uruguay",
-    "FRA": "France",       "SEN": "Senegal",
-    "IRA": "Iraq",         "NOR": "Norway",
-    "ARG": "Argentina",    "ALG": "Algeria",
-    "AUR": "Australia",    "JOR": "Jordan",
-    "POR": "Portugal",     "CON": "DR Congo",
-    "UZB": "Uzbekistan",   "COL": "Colombia",
-    "ENG": "England",      "CRO": "Croatia",
-    "GHA": "Ghana",        "PAN": "Panama",
-    "MEX": "Mexico",       "RSA": "South Africa",
-    "KOR": "South Korea",  "CZE": "Czechia",
-    "CAN": "Canada",       "BOS": "Bosnia",
-    "USA": "USA",          "PAR": "Paraguay",
-    "QAT": "Qatar",        "SUI": "Switzerland",
-    "BRA": "Brazil",       "MAR": "Morocco",
-    "HAI": "Haiti",        "SCO": "Scotland",
-    "AUS": "Australia",    "TUR": "Türkiye",
-    "GER": "Germany",      "CUR": "Curaçao",
-    "NED": "Netherlands",  "JAP": "Japan",
-    "CIV": "Ivory Coast",  "ECU": "Ecuador",
-    "SWE": "Sweden",       "TUN": "Tunisia",
-    "ESP": "Spain",        "CPV": "Cape Verde",
-    "IRQ": "Iraq",         "AUT": "Austria",
+    "BEL": "Belgium",
+    "EGY": "Egypt",
+    "IRN": "Iran",
+    "NZL": "New Zealand",
+    "SPA": "Spain",
+    "CAP": "Cape Verde",
+    "SAU": "Saudi Arabia",
+    "URY": "Uruguay",
+    "FRA": "France",
+    "SEN": "Senegal",
+    "IRA": "Iraq",
+    "NOR": "Norway",
+    "ARG": "Argentina",
+    "ALG": "Algeria",
+    "AUR": "Australia",
+    "JOR": "Jordan",
+    "POR": "Portugal",
+    "CON": "DR Congo",
+    "UZB": "Uzbekistan",
+    "COL": "Colombia",
+    "ENG": "England",
+    "CRO": "Croatia",
+    "GHA": "Ghana",
+    "PAN": "Panama",
+    "MEX": "Mexico",
+    "RSA": "South Africa",
+    "KOR": "South Korea",
+    "CZE": "Czechia",
+    "CAN": "Canada",
+    "BOS": "Bosnia",
+    "USA": "USA",
+    "PAR": "Paraguay",
+    "QAT": "Qatar",
+    "SUI": "Switzerland",
+    "BRA": "Brazil",
+    "MAR": "Morocco",
+    "HAI": "Haiti",
+    "SCO": "Scotland",
+    "AUS": "Australia",
+    "TUR": "T\u00fcrkiye",
+    "GER": "Germany",
+    "CUR": "Cura\u00e7ao",
+    "NED": "Netherlands",
+    "JAP": "Japan",
+    "CIV": "Ivory Coast",
+    "ECU": "Ecuador",
+    "SWE": "Sweden",
+    "TUN": "Tunisia",
+    "ESP": "Spain",
+    "CPV": "Cape Verde",
+    "IRQ": "Iraq",
+    "AUT": "Austria",
     "COD": "DR Congo"
   },
   "matches": [
-    { "id": "r1a1", "round": 1, "group": "A", "home": "MEX", "away": "RSA", "result": [3,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [3,0], "Claude": null } },
-    { "id": "r1a2", "round": 1, "group": "A", "home": "KOR", "away": "CZE", "result": [1,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,1], "Claude": null } },
-    { "id": "r1b1", "round": 1, "group": "B", "home": "CAN", "away": "BOS", "result": [0,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,0], "Claude": null } },
-    { "id": "r1b2", "round": 1, "group": "B", "home": "USA", "away": "PAR", "result": [2,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,1], "Claude": null } },
-    { "id": "r1c1", "round": 1, "group": "C", "home": "QAT", "away": "SUI", "result": [0,3],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,3], "Claude": null } },
-    { "id": "r1c2", "round": 1, "group": "C", "home": "BRA", "away": "MAR", "result": [2,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,1], "Claude": null } },
-    { "id": "r1d1", "round": 1, "group": "D", "home": "HAI", "away": "SCO", "result": [0,3],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,3], "Claude": null } },
-    { "id": "r1d2", "round": 1, "group": "D", "home": "AUS", "away": "TUR", "result": [0,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,1], "Claude": null } },
-    { "id": "r1e1", "round": 1, "group": "E", "home": "GER", "away": "CUR", "result": [3,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [3,0], "Claude": null } },
-    { "id": "r1e2", "round": 1, "group": "E", "home": "NED", "away": "JAP", "result": [1,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,0], "Claude": null } },
-    { "id": "r1f1", "round": 1, "group": "F", "home": "CIV", "away": "ECU", "result": [0,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,1], "Claude": null } },
-    { "id": "r1f2", "round": 1, "group": "F", "home": "SWE", "away": "TUN", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "g1",   "round": 1, "group": "G", "home": "BEL", "away": "EGY", "result": [2,0],
-      "predictions": { "Oliver": [1,1], "Cem": [3,1], "Dad": [3,0], "Shaun": null, "Tadlik": [2,0], "Claude": [1,2] } },
-    { "id": "g2",   "round": 1, "group": "G", "home": "IRN", "away": "NZL", "result": [1,0],
-      "predictions": { "Oliver": [1,1], "Cem": [2,1], "Dad": [0,2], "Shaun": null, "Tadlik": [1,0], "Claude": [1,0] } },
-    { "id": "h1",   "round": 1, "group": "H", "home": "SPA", "away": "CAP", "result": [3,0],
-      "predictions": { "Oliver": [4,1], "Cem": [5,0], "Dad": [3,0], "Shaun": null, "Tadlik": [3,0], "Claude": [3,0] } },
-    { "id": "h2",   "round": 1, "group": "H", "home": "SAU", "away": "URY", "result": [0,2],
-      "predictions": { "Oliver": [0,2], "Cem": [1,3], "Dad": [0,0], "Shaun": null, "Tadlik": [0,2], "Claude": [0,2] } },
-    { "id": "i1",   "round": 1, "group": "I", "home": "FRA", "away": "SEN", "result": [3,0],
-      "predictions": { "Oliver": [1,1], "Cem": [4,2], "Dad": [2,0], "Shaun": null, "Tadlik": [3,0], "Claude": [2,1] } },
-    { "id": "i2",   "round": 1, "group": "I", "home": "IRA", "away": "NOR", "result": [1,2],
-      "predictions": { "Oliver": [1,3], "Cem": [1,2], "Dad": [1,1], "Shaun": null, "Tadlik": [1,2], "Claude": [0,2] } },
-    { "id": "j1",   "round": 1, "group": "J", "home": "ARG", "away": "ALG", "result": [2,0],
-      "predictions": { "Oliver": [1,0], "Cem": [2,2], "Dad": [3,0], "Shaun": null, "Tadlik": [2,0], "Claude": [2,0] } },
-    { "id": "j2",   "round": 1, "group": "J", "home": "AUR", "away": "JOR", "result": [1,0],
-      "predictions": { "Oliver": [2,0], "Cem": [1,0], "Dad": [1,1], "Shaun": null, "Tadlik": [1,0], "Claude": [2,0] } },
-    { "id": "k1",   "round": 1, "group": "K", "home": "POR", "away": "CON", "result": [2,0],
-      "predictions": { "Oliver": [4,0], "Cem": [2,0], "Dad": [3,1], "Shaun": null, "Tadlik": [2,0], "Claude": [3,0] } },
-    { "id": "k2",   "round": 1, "group": "K", "home": "UZB", "away": "COL", "result": [0,2],
-      "predictions": { "Oliver": [0,1], "Cem": [1,3], "Dad": [0,0], "Shaun": null, "Tadlik": [0,2], "Claude": [0,2] } },
-    { "id": "l1",   "round": 1, "group": "L", "home": "ENG", "away": "CRO", "result": [1,2],
-      "predictions": { "Oliver": [2,1], "Cem": [1,3], "Dad": [0,1], "Shaun": null, "Tadlik": [1,2], "Claude": [2,0] } },
-    { "id": "l2",   "round": 1, "group": "L", "home": "GHA", "away": "PAN", "result": [1,0],
-      "predictions": { "Oliver": [1,0], "Cem": [1,1], "Dad": [1,1], "Shaun": null, "Tadlik": [1,0], "Claude": [1,0] } },
-
-    { "id": "r2a1", "round": 2, "group": "A", "home": "SUI", "away": "BOS", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r2a2", "round": 2, "group": "A", "home": "CAN", "away": "QAT", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r2a3", "round": 2, "group": "A", "home": "MEX", "away": "KOR", "result": [1,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,0], "Claude": null } },
-    { "id": "r2a4", "round": 2, "group": "A", "home": "USA", "away": "AUS", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r2b1", "round": 2, "group": "B", "home": "SCO", "away": "MAR", "result": [1,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,2], "Claude": null } },
-    { "id": "r2b2", "round": 2, "group": "B", "home": "BRA", "away": "HAI", "result": [4,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [4,0], "Claude": null } },
-    { "id": "r2b3", "round": 2, "group": "B", "home": "TUR", "away": "PAR", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r2b4", "round": 2, "group": "B", "home": "NED", "away": "SWE", "result": [2,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,1], "Claude": null } },
-    { "id": "r2c1", "round": 2, "group": "C", "home": "GER", "away": "CIV", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r2c2", "round": 2, "group": "C", "home": "ECU", "away": "CUR", "result": [1,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,0], "Claude": null } },
-    { "id": "r2c3", "round": 2, "group": "C", "home": "TUN", "away": "JAP", "result": [0,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,2], "Claude": null } },
-    { "id": "r2c4", "round": 2, "group": "C", "home": "ESP", "away": "SAU", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r2d1", "round": 2, "group": "D", "home": "BEL", "away": "IRN", "result": [3,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [3,0], "Claude": null } },
-    { "id": "r2d2", "round": 2, "group": "D", "home": "URY", "away": "CPV", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r2d3", "round": 2, "group": "D", "home": "NZL", "away": "EGY", "result": [0,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,2], "Claude": null } },
-    { "id": "r2d4", "round": 2, "group": "D", "home": "ARG", "away": "AUT", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r2e1", "round": 2, "group": "E", "home": "FRA", "away": "IRQ", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r2e2", "round": 2, "group": "E", "home": "NOR", "away": "SEN", "result": [1,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,1], "Claude": null } },
-    { "id": "r2e3", "round": 2, "group": "E", "home": "JOR", "away": "ALG", "result": [1,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,2], "Claude": null } },
-    { "id": "r2e4", "round": 2, "group": "E", "home": "POR", "away": "UZB", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r2f1", "round": 2, "group": "F", "home": "ENG", "away": "GHA", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r2f2", "round": 2, "group": "F", "home": "PAN", "away": "CRO", "result": [0,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,2], "Claude": null } },
-    { "id": "r2f3", "round": 2, "group": "F", "home": "COL", "away": "COD", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-
-    { "id": "r3a1", "round": 3, "group": "A", "home": "RSA", "away": "KOR", "result": [0,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,2], "Claude": null } },
-    { "id": "r3a2", "round": 3, "group": "A", "home": "CZE", "away": "MEX", "result": [1,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,1], "Claude": null } },
-    { "id": "r3b1", "round": 3, "group": "B", "home": "SUI", "away": "CAN", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r3b2", "round": 3, "group": "B", "home": "BOS", "away": "QAT", "result": [2,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,1], "Claude": null } },
-    { "id": "r3c1", "round": 3, "group": "C", "home": "MAR", "away": "HAI", "result": [3,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [3,0], "Claude": null } },
-    { "id": "r3c2", "round": 3, "group": "C", "home": "SCO", "away": "BRA", "result": [1,3],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,3], "Claude": null } },
-    { "id": "r3d1", "round": 3, "group": "D", "home": "PAR", "away": "AUS", "result": [1,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,0], "Claude": null } },
-    { "id": "r3d2", "round": 3, "group": "D", "home": "TUR", "away": "USA", "result": [1,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,0], "Claude": null } },
-    { "id": "r3e1", "round": 3, "group": "E", "home": "CUR", "away": "CIV", "result": [0,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,1], "Claude": null } },
-    { "id": "r3e2", "round": 3, "group": "E", "home": "ECU", "away": "GER", "result": [1,3],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,3], "Claude": null } },
-    { "id": "r3f1", "round": 3, "group": "F", "home": "TUN", "away": "NED", "result": [0,3],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,3], "Claude": null } },
-    { "id": "r3f2", "round": 3, "group": "F", "home": "JAP", "away": "SWE", "result": [0,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,0], "Claude": null } },
-    { "id": "r3g1", "round": 3, "group": "G", "home": "EGY", "away": "IRN", "result": [2,0],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,0], "Claude": null } },
-    { "id": "r3g2", "round": 3, "group": "G", "home": "NZL", "away": "BEL", "result": [0,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,2], "Claude": null } },
-    { "id": "r3h1", "round": 3, "group": "H", "home": "URY", "away": "ESP", "result": [1,3],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,3], "Claude": null } },
-    { "id": "r3h2", "round": 3, "group": "H", "home": "CPV", "away": "SAU", "result": [1,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,2], "Claude": null } },
-    { "id": "r3i1", "round": 3, "group": "I", "home": "NOR", "away": "FRA", "result": [0,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,2], "Claude": null } },
-    { "id": "r3i2", "round": 3, "group": "I", "home": "SEN", "away": "IRQ", "result": [3,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [3,1], "Claude": null } },
-    { "id": "r3j1", "round": 3, "group": "J", "home": "JOR", "away": "ARG", "result": [0,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,2], "Claude": null } },
-    { "id": "r3j2", "round": 3, "group": "J", "home": "ALG", "away": "AUT", "result": [0,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,1], "Claude": null } },
-    { "id": "r3k1", "round": 3, "group": "K", "home": "COD", "away": "UZB", "result": [1,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,2], "Claude": null } },
-    { "id": "r3k2", "round": 3, "group": "K", "home": "COL", "away": "POR", "result": [1,3],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [1,3], "Claude": null } },
-    { "id": "r3l1", "round": 3, "group": "L", "home": "CRO", "away": "GHA", "result": [2,1],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [2,1], "Claude": null } },
-    { "id": "r3l2", "round": 3, "group": "L", "home": "PAN", "away": "ENG", "result": [0,2],
-      "predictions": { "Oliver": null, "Cem": null, "Dad": null, "Shaun": null, "Tadlik": [0,2], "Claude": null } }
+    {
+      "id": "r1a1",
+      "round": 1,
+      "group": "A",
+      "home": "MEX",
+      "away": "RSA",
+      "result": [
+        3,
+        0
+      ],
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          3,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r1a2",
+      "round": 1,
+      "group": "A",
+      "home": "KOR",
+      "away": "CZE",
+      "result": [
+        1,
+        1
+      ],
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r1b1",
+      "round": 1,
+      "group": "B",
+      "home": "CAN",
+      "away": "BOS",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r1b2",
+      "round": 1,
+      "group": "B",
+      "home": "USA",
+      "away": "PAR",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r1c1",
+      "round": 1,
+      "group": "C",
+      "home": "QAT",
+      "away": "SUI",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          3
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r1c2",
+      "round": 1,
+      "group": "C",
+      "home": "BRA",
+      "away": "MAR",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r1d1",
+      "round": 1,
+      "group": "D",
+      "home": "HAI",
+      "away": "SCO",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          3
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r1d2",
+      "round": 1,
+      "group": "D",
+      "home": "AUS",
+      "away": "TUR",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r1e1",
+      "round": 1,
+      "group": "E",
+      "home": "GER",
+      "away": "CUR",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          3,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r1e2",
+      "round": 1,
+      "group": "E",
+      "home": "NED",
+      "away": "JAP",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r1f1",
+      "round": 1,
+      "group": "F",
+      "home": "CIV",
+      "away": "ECU",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r1f2",
+      "round": 1,
+      "group": "F",
+      "home": "SWE",
+      "away": "TUN",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "g1",
+      "round": 1,
+      "group": "G",
+      "home": "BEL",
+      "away": "EGY",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          1,
+          1
+        ],
+        "Cem": [
+          3,
+          1
+        ],
+        "Dad": [
+          3,
+          0
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "g2",
+      "round": 1,
+      "group": "G",
+      "home": "IRN",
+      "away": "NZL",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          1,
+          1
+        ],
+        "Cem": [
+          2,
+          1
+        ],
+        "Dad": [
+          0,
+          2
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          0
+        ],
+        "Claude": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "h1",
+      "round": 1,
+      "group": "H",
+      "home": "SPA",
+      "away": "CAP",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          4,
+          1
+        ],
+        "Cem": [
+          5,
+          0
+        ],
+        "Dad": [
+          3,
+          0
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          3,
+          0
+        ],
+        "Claude": [
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "id": "h2",
+      "round": 1,
+      "group": "H",
+      "home": "SAU",
+      "away": "URY",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          0,
+          2
+        ],
+        "Cem": [
+          1,
+          3
+        ],
+        "Dad": [
+          0,
+          0
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          2
+        ],
+        "Claude": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "id": "i1",
+      "round": 1,
+      "group": "I",
+      "home": "FRA",
+      "away": "SEN",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          1,
+          1
+        ],
+        "Cem": [
+          4,
+          2
+        ],
+        "Dad": [
+          2,
+          0
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          3,
+          0
+        ],
+        "Claude": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "id": "i2",
+      "round": 1,
+      "group": "I",
+      "home": "IRA",
+      "away": "NOR",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          1,
+          3
+        ],
+        "Cem": [
+          1,
+          2
+        ],
+        "Dad": [
+          1,
+          1
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          2
+        ],
+        "Claude": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "id": "j1",
+      "round": 1,
+      "group": "J",
+      "home": "ARG",
+      "away": "ALG",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          1,
+          0
+        ],
+        "Cem": [
+          2,
+          2
+        ],
+        "Dad": [
+          3,
+          0
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "id": "j2",
+      "round": 1,
+      "group": "J",
+      "home": "AUR",
+      "away": "JOR",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          2,
+          0
+        ],
+        "Cem": [
+          1,
+          0
+        ],
+        "Dad": [
+          1,
+          1
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          0
+        ],
+        "Claude": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "id": "k1",
+      "round": 1,
+      "group": "K",
+      "home": "POR",
+      "away": "CON",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          4,
+          0
+        ],
+        "Cem": [
+          2,
+          0
+        ],
+        "Dad": [
+          3,
+          1
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": [
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "id": "k2",
+      "round": 1,
+      "group": "K",
+      "home": "UZB",
+      "away": "COL",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          0,
+          1
+        ],
+        "Cem": [
+          1,
+          3
+        ],
+        "Dad": [
+          0,
+          0
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          2
+        ],
+        "Claude": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "id": "l1",
+      "round": 1,
+      "group": "L",
+      "home": "ENG",
+      "away": "CRO",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          2,
+          1
+        ],
+        "Cem": [
+          1,
+          3
+        ],
+        "Dad": [
+          0,
+          1
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          2
+        ],
+        "Claude": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "id": "l2",
+      "round": 1,
+      "group": "L",
+      "home": "GHA",
+      "away": "PAN",
+      "result": null,
+      "predictions": {
+        "Oliver": [
+          1,
+          0
+        ],
+        "Cem": [
+          1,
+          1
+        ],
+        "Dad": [
+          1,
+          1
+        ],
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          0
+        ],
+        "Claude": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "r2a1",
+      "round": 2,
+      "group": "A",
+      "home": "SUI",
+      "away": "BOS",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2a2",
+      "round": 2,
+      "group": "A",
+      "home": "CAN",
+      "away": "QAT",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2a3",
+      "round": 2,
+      "group": "A",
+      "home": "MEX",
+      "away": "KOR",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2a4",
+      "round": 2,
+      "group": "A",
+      "home": "USA",
+      "away": "AUS",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2b1",
+      "round": 2,
+      "group": "B",
+      "home": "SCO",
+      "away": "MAR",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          2
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2b2",
+      "round": 2,
+      "group": "B",
+      "home": "BRA",
+      "away": "HAI",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          4,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2b3",
+      "round": 2,
+      "group": "B",
+      "home": "TUR",
+      "away": "PAR",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2b4",
+      "round": 2,
+      "group": "B",
+      "home": "NED",
+      "away": "SWE",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2c1",
+      "round": 2,
+      "group": "C",
+      "home": "GER",
+      "away": "CIV",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2c2",
+      "round": 2,
+      "group": "C",
+      "home": "ECU",
+      "away": "CUR",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2c3",
+      "round": 2,
+      "group": "C",
+      "home": "TUN",
+      "away": "JAP",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          2
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2c4",
+      "round": 2,
+      "group": "C",
+      "home": "ESP",
+      "away": "SAU",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2d1",
+      "round": 2,
+      "group": "D",
+      "home": "BEL",
+      "away": "IRN",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          3,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2d2",
+      "round": 2,
+      "group": "D",
+      "home": "URY",
+      "away": "CPV",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2d3",
+      "round": 2,
+      "group": "D",
+      "home": "NZL",
+      "away": "EGY",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          2
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2d4",
+      "round": 2,
+      "group": "D",
+      "home": "ARG",
+      "away": "AUT",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2e1",
+      "round": 2,
+      "group": "E",
+      "home": "FRA",
+      "away": "IRQ",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2e2",
+      "round": 2,
+      "group": "E",
+      "home": "NOR",
+      "away": "SEN",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2e3",
+      "round": 2,
+      "group": "E",
+      "home": "JOR",
+      "away": "ALG",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          2
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2e4",
+      "round": 2,
+      "group": "E",
+      "home": "POR",
+      "away": "UZB",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2f1",
+      "round": 2,
+      "group": "F",
+      "home": "ENG",
+      "away": "GHA",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2f2",
+      "round": 2,
+      "group": "F",
+      "home": "PAN",
+      "away": "CRO",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          2
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r2f3",
+      "round": 2,
+      "group": "F",
+      "home": "COL",
+      "away": "COD",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3a1",
+      "round": 3,
+      "group": "A",
+      "home": "RSA",
+      "away": "KOR",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          2
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3a2",
+      "round": 3,
+      "group": "A",
+      "home": "CZE",
+      "away": "MEX",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3b1",
+      "round": 3,
+      "group": "B",
+      "home": "SUI",
+      "away": "CAN",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3b2",
+      "round": 3,
+      "group": "B",
+      "home": "BOS",
+      "away": "QAT",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3c1",
+      "round": 3,
+      "group": "C",
+      "home": "MAR",
+      "away": "HAI",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          3,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3c2",
+      "round": 3,
+      "group": "C",
+      "home": "SCO",
+      "away": "BRA",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          3
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3d1",
+      "round": 3,
+      "group": "D",
+      "home": "PAR",
+      "away": "AUS",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3d2",
+      "round": 3,
+      "group": "D",
+      "home": "TUR",
+      "away": "USA",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3e1",
+      "round": 3,
+      "group": "E",
+      "home": "CUR",
+      "away": "CIV",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3e2",
+      "round": 3,
+      "group": "E",
+      "home": "ECU",
+      "away": "GER",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          3
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3f1",
+      "round": 3,
+      "group": "F",
+      "home": "TUN",
+      "away": "NED",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          3
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3f2",
+      "round": 3,
+      "group": "F",
+      "home": "JAP",
+      "away": "SWE",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3g1",
+      "round": 3,
+      "group": "G",
+      "home": "EGY",
+      "away": "IRN",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          0
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3g2",
+      "round": 3,
+      "group": "G",
+      "home": "NZL",
+      "away": "BEL",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          2
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3h1",
+      "round": 3,
+      "group": "H",
+      "home": "URY",
+      "away": "ESP",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          3
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3h2",
+      "round": 3,
+      "group": "H",
+      "home": "CPV",
+      "away": "SAU",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          2
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3i1",
+      "round": 3,
+      "group": "I",
+      "home": "NOR",
+      "away": "FRA",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          2
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3i2",
+      "round": 3,
+      "group": "I",
+      "home": "SEN",
+      "away": "IRQ",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          3,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3j1",
+      "round": 3,
+      "group": "J",
+      "home": "JOR",
+      "away": "ARG",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          2
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3j2",
+      "round": 3,
+      "group": "J",
+      "home": "ALG",
+      "away": "AUT",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3k1",
+      "round": 3,
+      "group": "K",
+      "home": "COD",
+      "away": "UZB",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          2
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3k2",
+      "round": 3,
+      "group": "K",
+      "home": "COL",
+      "away": "POR",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          1,
+          3
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3l1",
+      "round": 3,
+      "group": "L",
+      "home": "CRO",
+      "away": "GHA",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          2,
+          1
+        ],
+        "Claude": null
+      }
+    },
+    {
+      "id": "r3l2",
+      "round": 3,
+      "group": "L",
+      "home": "PAN",
+      "away": "ENG",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": [
+          0,
+          2
+        ],
+        "Claude": null
+      }
+    }
   ],
   "bonus": {
     "questions": [
-      { "id": "golden_boot",   "label": "Golden Boot" },
-      { "id": "winner",        "label": "Tournament Winner" },
-      { "id": "biggest_upset", "label": "Biggest Upset" },
-      { "id": "goals_final",   "label": "Goals in Final" },
-      { "id": "best_gk",       "label": "Best Goalkeeper" },
-      { "id": "dark_horse",    "label": "Dark Horse" }
+      {
+        "id": "golden_boot",
+        "label": "Golden Boot"
+      },
+      {
+        "id": "winner",
+        "label": "Tournament Winner"
+      },
+      {
+        "id": "biggest_upset",
+        "label": "Biggest Upset"
+      },
+      {
+        "id": "goals_final",
+        "label": "Goals in Final"
+      },
+      {
+        "id": "best_gk",
+        "label": "Best Goalkeeper"
+      },
+      {
+        "id": "dark_horse",
+        "label": "Dark Horse"
+      }
     ],
     "predictions": {
       "Oliver": {
-        "golden_boot": "Messi", "winner": "Netherlands",
-        "biggest_upset": "Spain", "goals_final": "5",
-        "best_gk": "Zion Suzuki", "dark_horse": "Japan"
+        "golden_boot": "Messi",
+        "winner": "Netherlands",
+        "biggest_upset": "Spain",
+        "goals_final": "5",
+        "best_gk": "Zion Suzuki",
+        "dark_horse": "Japan"
       },
       "Cem": {
-        "golden_boot": "Mbappé", "winner": "Germany",
-        "biggest_upset": "Argentina", "goals_final": "4",
-        "best_gk": "your mama", "dark_horse": "Turkey"
+        "golden_boot": "Mbapp\u00e9",
+        "winner": "Germany",
+        "biggest_upset": "Argentina",
+        "goals_final": "4",
+        "best_gk": "your mama",
+        "dark_horse": "Turkey"
       },
       "Dad": {
-        "golden_boot": "Messi", "winner": "Argentina",
-        "biggest_upset": "France", "goals_final": "2",
-        "best_gk": "Germany", "dark_horse": "—"
+        "golden_boot": "Messi",
+        "winner": "Argentina",
+        "biggest_upset": "France",
+        "goals_final": "2",
+        "best_gk": "Germany",
+        "dark_horse": "\u2014"
       },
       "Shaun": {
-        "golden_boot": null, "winner": null,
-        "biggest_upset": null, "goals_final": null,
-        "best_gk": null, "dark_horse": null
+        "golden_boot": null,
+        "winner": null,
+        "biggest_upset": null,
+        "goals_final": null,
+        "best_gk": null,
+        "dark_horse": null
       },
       "Tadlik": {
-        "golden_boot": "Mbappé", "winner": "Spain",
-        "biggest_upset": "France", "goals_final": "4",
-        "best_gk": "Manuel Neuer", "dark_horse": "Norway"
+        "golden_boot": "Mbapp\u00e9",
+        "winner": "Spain",
+        "biggest_upset": "France",
+        "goals_final": "4",
+        "best_gk": "Manuel Neuer",
+        "dark_horse": "Norway"
       },
       "Claude": {
-        "golden_boot": "Mbappé", "winner": "France",
-        "biggest_upset": "Morocco", "goals_final": "3",
-        "best_gk": "Zion Suzuki", "dark_horse": "Japan"
+        "golden_boot": "Mbapp\u00e9",
+        "winner": "France",
+        "biggest_upset": "Morocco",
+        "goals_final": "3",
+        "best_gk": "Zion Suzuki",
+        "dark_horse": "Japan"
       }
     },
     "scores": {
-      "Oliver": null, "Cem": null, "Dad": null,
-      "Shaun": null,  "Tadlik": null, "Claude": null
+      "Oliver": null,
+      "Cem": null,
+      "Dad": null,
+      "Shaun": null,
+      "Tadlik": null,
+      "Claude": null
     }
   }
 }
