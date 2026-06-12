@@ -125,7 +125,25 @@ function renderLeaderboard(data) {
 function renderMatches(data) {
   const players = visiblePlayers(data);
   const rounds = [...new Set(data.matches.map(m => m.round))].sort();
-  let html = '';
+
+  const totals = Object.fromEntries(players.map(({ id }) => {
+    let pts = 0;
+    data.matches.forEach(m => { const p = matchPts(m, id); if (p !== null) pts += p; });
+    return [id, pts];
+  }));
+
+  let html = `<div class="matches-pts-bar">`;
+  players.forEach(({ id }) => {
+    html += `<div class="mpts-cell">
+      <div class="mpts-name">${id}</div>
+      <div class="mpts-val">${totals[id]}</div>
+    </div>`;
+  });
+  html += `</div>`;
+
+  const matchBtn = document.querySelector('.tab-btn[data-tab="matches"]');
+  const totalPts = players.reduce((s, { id }) => s + totals[id], 0);
+  if (matchBtn) matchBtn.textContent = totalPts > 0 ? `Matches · ${totalPts}` : 'Matches';
 
   rounds.forEach(round => {
     const roundMatches = data.matches.filter(m => m.round === round);
