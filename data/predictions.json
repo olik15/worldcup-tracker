@@ -45,7 +45,7 @@
     "NOR": "Norway",
     "ARG": "Argentina",
     "ALG": "Algeria",
-    "AUR": "Australia",
+    "AUR": "Austria",
     "JOR": "Jordan",
     "POR": "Portugal",
     "CON": "DR Congo",
@@ -111,7 +111,10 @@
           3,
           0
         ],
-        "Claude": null
+        "Claude": [
+          2,
+          0
+        ]
       }
     },
     {
@@ -139,7 +142,10 @@
           1,
           1
         ],
-        "Claude": null
+        "Claude": [
+          2,
+          1
+        ]
       }
     },
     {
@@ -164,7 +170,10 @@
           0,
           0
         ],
-        "Claude": null
+        "Claude": [
+          1,
+          1
+        ]
       }
     },
     {
@@ -189,7 +198,10 @@
           2,
           1
         ],
-        "Claude": null
+        "Claude": [
+          2,
+          1
+        ]
       }
     },
     {
@@ -214,7 +226,10 @@
           0,
           3
         ],
-        "Claude": null
+        "Claude": [
+          0,
+          2
+        ]
       }
     },
     {
@@ -239,7 +254,10 @@
           2,
           1
         ],
-        "Claude": null
+        "Claude": [
+          2,
+          0
+        ]
       }
     },
     {
@@ -264,7 +282,10 @@
           0,
           3
         ],
-        "Claude": null
+        "Claude": [
+          0,
+          2
+        ]
       }
     },
     {
@@ -289,7 +310,10 @@
           0,
           1
         ],
-        "Claude": null
+        "Claude": [
+          1,
+          1
+        ]
       }
     },
     {
@@ -314,7 +338,10 @@
           3,
           0
         ],
-        "Claude": null
+        "Claude": [
+          3,
+          0
+        ]
       }
     },
     {
@@ -339,7 +366,10 @@
           1,
           0
         ],
-        "Claude": null
+        "Claude": [
+          2,
+          0
+        ]
       }
     },
     {
@@ -364,7 +394,10 @@
           0,
           1
         ],
-        "Claude": null
+        "Claude": [
+          1,
+          1
+        ]
       }
     },
     {
@@ -389,7 +422,10 @@
           2,
           0
         ],
-        "Claude": null
+        "Claude": [
+          2,
+          0
+        ]
       }
     },
     {
@@ -398,7 +434,10 @@
       "group": "G",
       "home": "BEL",
       "away": "EGY",
-      "result": null,
+      "result": [
+        2,
+        0
+      ],
       "predictions": {
         "Oliver": [
           1,
@@ -432,7 +471,10 @@
       "group": "G",
       "home": "IRN",
       "away": "NZL",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": [
           1,
@@ -466,7 +508,10 @@
       "group": "H",
       "home": "SPA",
       "away": "CAP",
-      "result": null,
+      "result": [
+        4,
+        0
+      ],
       "predictions": {
         "Oliver": [
           4,
@@ -500,7 +545,10 @@
       "group": "H",
       "home": "SAU",
       "away": "URY",
-      "result": null,
+      "result": [
+        0,
+        2
+      ],
       "predictions": {
         "Oliver": [
           0,
@@ -534,7 +582,10 @@
       "group": "I",
       "home": "FRA",
       "away": "SEN",
-      "result": null,
+      "result": [
+        1,
+        0
+      ],
       "predictions": {
         "Oliver": [
           1,
@@ -568,7 +619,10 @@
       "group": "I",
       "home": "IRA",
       "away": "NOR",
-      "result": null,
+      "result": [
+        0,
+        1
+      ],
       "predictions": {
         "Oliver": [
           1,
@@ -602,7 +656,10 @@
       "group": "J",
       "home": "ARG",
       "away": "ALG",
-      "result": null,
+      "result": [
+        3,
+        0
+      ],
       "predictions": {
         "Oliver": [
           1,
@@ -636,7 +693,10 @@
       "group": "J",
       "home": "AUR",
       "away": "JOR",
-      "result": null,
+      "result": [
+        1,
+        0
+      ],
       "predictions": {
         "Oliver": [
           2,
@@ -670,7 +730,10 @@
       "group": "K",
       "home": "POR",
       "away": "CON",
-      "result": null,
+      "result": [
+        2,
+        1
+      ],
       "predictions": {
         "Oliver": [
           4,
@@ -704,7 +767,10 @@
       "group": "K",
       "home": "UZB",
       "away": "COL",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": [
           0,
@@ -738,7 +804,10 @@
       "group": "L",
       "home": "ENG",
       "away": "CRO",
-      "result": null,
+      "result": [
+        1,
+        0
+      ],
       "predictions": {
         "Oliver": [
           2,
@@ -772,7 +841,10 @@
       "group": "L",
       "home": "GHA",
       "away": "PAN",
-      "result": null,
+      "result": [
+        2,
+        0
+      ],
       "predictions": {
         "Oliver": [
           1,
