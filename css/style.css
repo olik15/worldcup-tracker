@@ -109,6 +109,42 @@ body {
   flex-shrink: 0;
 }
 
+/* ── Filter bar ─────────────────────────────────────── */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: -24px;
+}
+.filter-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 4px;
+}
+.filter-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  background: none;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  padding: 6px 13px;
+  border-radius: 20px;
+  transition: all 0.15s;
+}
+.filter-chip:hover { color: var(--ink); border-color: rgba(13,24,36,0.25); }
+.filter-chip.active {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
 /* ── Content ────────────────────────────────────────── */
 main { width: 100%; }
 .tab-pane { display: none; }

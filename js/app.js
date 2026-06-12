@@ -1,19 +1,22 @@
+let activeFilters = new Set();
+let _data = null;
+
 async function init() {
-  let data;
   try {
     const res = await fetch('data/predictions.json');
     if (!res.ok) throw new Error(res.status);
-    data = await res.json();
+    _data = await res.json();
   } catch (e) {
     document.querySelector('main').innerHTML =
       '<p style="padding:32px;color:#902020;font-family:\'JetBrains Mono\',monospace;font-size:12px">⚠ Could not load data. Open via an HTTP server, not file://</p>';
     return;
   }
 
+  activeFilters = new Set(_data.players.map(p => p.id));
+
   setupTabs();
-  renderLeaderboard(data);
-  renderMatches(data);
-  renderBonus(data);
+  renderFilterBar(_data);
+  renderAll();
 }
 
 function setupTabs() {
@@ -27,9 +30,43 @@ function setupTabs() {
   });
 }
 
-function outcome(h, a) {
-  return h > a ? 'H' : a > h ? 'A' : 'D';
+function renderFilterBar(data) {
+  const bar = document.getElementById('filter-bar');
+  let html = '<span class="filter-label">Show</span>';
+  data.players.forEach(({ id }) => {
+    html += `<button class="filter-chip active" data-player="${id}">${id}</button>`;
+  });
+  bar.innerHTML = html;
+
+  bar.querySelectorAll('.filter-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pid = btn.dataset.player;
+      if (activeFilters.has(pid)) {
+        if (activeFilters.size > 1) {
+          activeFilters.delete(pid);
+          btn.classList.remove('active');
+        }
+      } else {
+        activeFilters.add(pid);
+        btn.classList.add('active');
+      }
+      renderAll();
+    });
+  });
 }
+
+function renderAll() {
+  renderLeaderboard(_data);
+  renderMatches(_data);
+  renderBonus(_data);
+}
+
+function visiblePlayers(data) {
+  return data.players.filter(p => activeFilters.has(p.id));
+}
+
+/* ── Scoring ────────────────────────────────────────── */
+function outcome(h, a) { return h > a ? 'H' : a > h ? 'A' : 'D'; }
 
 function matchPts(match, pid) {
   const r = match.result;
@@ -53,8 +90,8 @@ function calcTotals(data) {
 /* ── Leaderboard ────────────────────────────────────── */
 function renderLeaderboard(data) {
   const totals = calcTotals(data);
-  const sorted = [...data.players].sort((a, b) => totals[b.id].total - totals[a.id].total);
-  const medals = ['01', '02', '03', '04', '05'];
+  const players = visiblePlayers(data);
+  const sorted = [...players].sort((a, b) => totals[b.id].total - totals[a.id].total);
   const played = data.matches.filter(m => m.result).length;
 
   let html = `<table class="lb-table">
@@ -66,8 +103,9 @@ function renderLeaderboard(data) {
   sorted.forEach(({ id }, i) => {
     const { mp, bp, total } = totals[id];
     const bpStr = bp !== null && bp !== undefined ? bp : '—';
+    const rank = String(i + 1).padStart(2, '0');
     html += `<tr>
-      <td class="lb-rank">${medals[i]}</td>
+      <td class="lb-rank">${rank}</td>
       <td class="lb-name">${id}</td>
       <td class="lb-sub">${mp} pts</td>
       <td class="lb-sub">${bpStr}</td>
@@ -82,6 +120,7 @@ function renderLeaderboard(data) {
 
 /* ── Matches ────────────────────────────────────────── */
 function renderMatches(data) {
+  const players = visiblePlayers(data);
   let html = '';
   let idx = 0;
 
@@ -105,7 +144,7 @@ function renderMatches(data) {
         </div>
         <div class="preds-row">`;
 
-    data.players.forEach(({ id }) => {
+    players.forEach(({ id }) => {
       const pred = match.predictions[id];
       if (!pred) {
         html += `<div class="pred-cell">
@@ -135,6 +174,7 @@ function renderMatches(data) {
 
 /* ── Bonus ──────────────────────────────────────────── */
 function renderBonus(data) {
+  const players = visiblePlayers(data);
   let html = '';
 
   data.bonus.questions.forEach(({ id, label }, i) => {
@@ -145,7 +185,7 @@ function renderBonus(data) {
         <div class="bonus-q-label">${label}</div>
         <div class="bonus-answers">`;
 
-    data.players.forEach(({ id: pid }) => {
+    players.forEach(({ id: pid }) => {
       const ans = data.bonus.predictions[pid]?.[id];
       const val = ans != null
         ? `<span class="bonus-val">${ans}</span>`
@@ -159,10 +199,9 @@ function renderBonus(data) {
     html += `</div></div></div>`;
   });
 
-  // Bonus scores section
   html += `<div class="bonus-scores-row">
     <div class="bonus-scores-title">Bonus scores</div>`;
-  data.players.forEach(({ id }) => {
+  players.forEach(({ id }) => {
     const score = data.bonus.scores[id];
     const pts = score !== null && score !== undefined
       ? `<span class="bonus-score-pts">${score}</span>`
