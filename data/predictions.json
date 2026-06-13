@@ -244,14 +244,23 @@
       "group": "C",
       "home": "BRA",
       "away": "MAR",
-      "result": null,
+      "result": [
+        3,
+        2
+      ],
       "predictions": {
         "Oliver": [
           2,
           3
         ],
-        "Cem": null,
-        "Dad": null,
+        "Cem": [
+          3,
+          2
+        ],
+        "Dad": [
+          3,
+          0
+        ],
         "Shaun": [
           1,
           1
@@ -272,13 +281,19 @@
       "group": "D",
       "home": "HAI",
       "away": "SCO",
-      "result": null,
+      "result": [
+        1,
+        2
+      ],
       "predictions": {
         "Oliver": [
           0,
           3
         ],
-        "Cem": null,
+        "Cem": [
+          1,
+          2
+        ],
         "Dad": null,
         "Shaun": [
           1,
@@ -300,13 +315,19 @@
       "group": "D",
       "home": "AUS",
       "away": "TUR",
-      "result": null,
+      "result": [
+        0,
+        2
+      ],
       "predictions": {
         "Oliver": [
           1,
           2
         ],
-        "Cem": null,
+        "Cem": [
+          0,
+          2
+        ],
         "Dad": null,
         "Shaun": [
           1,
@@ -328,13 +349,19 @@
       "group": "E",
       "home": "GER",
       "away": "CUR",
-      "result": null,
+      "result": [
+        4,
+        1
+      ],
       "predictions": {
         "Oliver": [
           2,
           0
         ],
-        "Cem": null,
+        "Cem": [
+          4,
+          1
+        ],
         "Dad": null,
         "Shaun": [
           3,
@@ -356,13 +383,19 @@
       "group": "E",
       "home": "NED",
       "away": "JAP",
-      "result": null,
+      "result": [
+        3,
+        3
+      ],
       "predictions": {
         "Oliver": [
           2,
           1
         ],
-        "Cem": null,
+        "Cem": [
+          3,
+          3
+        ],
         "Dad": null,
         "Shaun": [
           2,
@@ -384,13 +417,19 @@
       "group": "F",
       "home": "CIV",
       "away": "ECU",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": [
           0,
           2
         ],
-        "Cem": null,
+        "Cem": [
+          1,
+          1
+        ],
         "Dad": null,
         "Shaun": [
           1,
@@ -412,13 +451,19 @@
       "group": "F",
       "home": "SWE",
       "away": "TUN",
-      "result": null,
+      "result": [
+        2,
+        1
+      ],
       "predictions": {
         "Oliver": [
           1,
           1
         ],
-        "Cem": null,
+        "Cem": [
+          2,
+          1
+        ],
         "Dad": null,
         "Shaun": [
           0,
@@ -440,7 +485,10 @@
       "group": "G",
       "home": "BEL",
       "away": "EGY",
-      "result": null,
+      "result": [
+        3,
+        2
+      ],
       "predictions": {
         "Oliver": [
           1,
@@ -448,7 +496,7 @@
         ],
         "Cem": [
           3,
-          1
+          2
         ],
         "Dad": [
           3,
@@ -474,7 +522,10 @@
       "group": "G",
       "home": "IRN",
       "away": "NZL",
-      "result": null,
+      "result": [
+        2,
+        1
+      ],
       "predictions": {
         "Oliver": [
           1,
@@ -508,14 +559,17 @@
       "group": "H",
       "home": "SPA",
       "away": "CAP",
-      "result": null,
+      "result": [
+        4,
+        0
+      ],
       "predictions": {
         "Oliver": [
           4,
           1
         ],
         "Cem": [
-          5,
+          4,
           0
         ],
         "Dad": [
@@ -542,7 +596,10 @@
       "group": "H",
       "home": "SAU",
       "away": "URY",
-      "result": null,
+      "result": [
+        1,
+        4
+      ],
       "predictions": {
         "Oliver": [
           0,
@@ -550,7 +607,7 @@
         ],
         "Cem": [
           1,
-          3
+          4
         ],
         "Dad": [
           0,
@@ -576,14 +633,17 @@
       "group": "I",
       "home": "FRA",
       "away": "SEN",
-      "result": null,
+      "result": [
+        3,
+        2
+      ],
       "predictions": {
         "Oliver": [
           1,
           1
         ],
         "Cem": [
-          4,
+          3,
           2
         ],
         "Dad": [
@@ -610,7 +670,10 @@
       "group": "I",
       "home": "IRA",
       "away": "NOR",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": [
           1,
@@ -618,7 +681,7 @@
         ],
         "Cem": [
           1,
-          2
+          1
         ],
         "Dad": [
           1,
@@ -644,15 +707,18 @@
       "group": "J",
       "home": "ARG",
       "away": "ALG",
-      "result": null,
+      "result": [
+        3,
+        1
+      ],
       "predictions": {
         "Oliver": [
           1,
           0
         ],
         "Cem": [
-          2,
-          2
+          3,
+          1
         ],
         "Dad": [
           3,
@@ -678,15 +744,18 @@
       "group": "J",
       "home": "AUR",
       "away": "JOR",
-      "result": null,
+      "result": [
+        4,
+        1
+      ],
       "predictions": {
         "Oliver": [
           2,
           0
         ],
         "Cem": [
-          1,
-          0
+          4,
+          1
         ],
         "Dad": [
           1,
@@ -712,7 +781,10 @@
       "group": "K",
       "home": "POR",
       "away": "CON",
-      "result": null,
+      "result": [
+        2,
+        0
+      ],
       "predictions": {
         "Oliver": [
           4,
@@ -746,7 +818,10 @@
       "group": "K",
       "home": "UZB",
       "away": "COL",
-      "result": null,
+      "result": [
+        1,
+        3
+      ],
       "predictions": {
         "Oliver": [
           0,
@@ -780,15 +855,18 @@
       "group": "L",
       "home": "ENG",
       "away": "CRO",
-      "result": null,
+      "result": [
+        2,
+        1
+      ],
       "predictions": {
         "Oliver": [
           2,
           1
         ],
         "Cem": [
-          1,
-          3
+          2,
+          1
         ],
         "Dad": [
           0,
@@ -814,7 +892,10 @@
       "group": "L",
       "home": "GHA",
       "away": "PAN",
-      "result": null,
+      "result": [
+        1,
+        0
+      ],
       "predictions": {
         "Oliver": [
           1,
@@ -822,7 +903,7 @@
         ],
         "Cem": [
           1,
-          1
+          0
         ],
         "Dad": [
           1,
