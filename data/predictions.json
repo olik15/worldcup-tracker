@@ -185,7 +185,10 @@
       "group": "B",
       "home": "USA",
       "away": "PAR",
-      "result": null,
+      "result": [
+        4,
+        1
+      ],
       "predictions": {
         "Oliver": [
           0,
@@ -213,7 +216,10 @@
       "group": "C",
       "home": "QAT",
       "away": "SUI",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": [
           0,
