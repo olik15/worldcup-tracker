@@ -386,7 +386,10 @@
       "group": "E",
       "home": "NED",
       "away": "JAP",
-      "result": null,
+      "result": [
+        2,
+        2
+      ],
       "predictions": {
         "Oliver": [
           2,
