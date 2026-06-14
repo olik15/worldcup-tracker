@@ -352,7 +352,10 @@
       "group": "E",
       "home": "GER",
       "away": "CUR",
-      "result": null,
+      "result": [
+        6,
+        1
+      ],
       "predictions": {
         "Oliver": [
           2,
