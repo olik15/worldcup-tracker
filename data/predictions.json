@@ -247,7 +247,10 @@
       "group": "C",
       "home": "BRA",
       "away": "MAR",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": [
           2,
