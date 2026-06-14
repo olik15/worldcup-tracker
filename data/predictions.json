@@ -284,7 +284,10 @@
       "group": "D",
       "home": "HAI",
       "away": "SCO",
-      "result": null,
+      "result": [
+        0,
+        1
+      ],
       "predictions": {
         "Oliver": [
           0,
@@ -315,7 +318,10 @@
       "group": "D",
       "home": "AUS",
       "away": "TUR",
-      "result": null,
+      "result": [
+        2,
+        0
+      ],
       "predictions": {
         "Oliver": [
           1,
