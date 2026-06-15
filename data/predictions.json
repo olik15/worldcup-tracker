@@ -556,7 +556,10 @@
       "group": "H",
       "home": "SPA",
       "away": "CAP",
-      "result": null,
+      "result": [
+        0,
+        0
+      ],
       "predictions": {
         "Oliver": [
           4,
