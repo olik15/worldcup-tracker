@@ -488,7 +488,10 @@
       "group": "G",
       "home": "BEL",
       "away": "EGY",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": [
           1,
