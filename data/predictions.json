@@ -420,7 +420,10 @@
       "group": "F",
       "home": "CIV",
       "away": "ECU",
-      "result": null,
+      "result": [
+        1,
+        0
+      ],
       "predictions": {
         "Oliver": [
           0,
@@ -451,7 +454,10 @@
       "group": "F",
       "home": "SWE",
       "away": "TUN",
-      "result": null,
+      "result": [
+        5,
+        1
+      ],
       "predictions": {
         "Oliver": [
           1,
