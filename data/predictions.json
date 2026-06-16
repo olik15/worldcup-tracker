@@ -525,7 +525,10 @@
       "group": "G",
       "home": "IRN",
       "away": "NZL",
-      "result": null,
+      "result": [
+        2,
+        2
+      ],
       "predictions": {
         "Oliver": [
           1,
