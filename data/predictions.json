@@ -636,7 +636,10 @@
       "group": "I",
       "home": "FRA",
       "away": "SEN",
-      "result": null,
+      "result": [
+        3,
+        1
+      ],
       "predictions": {
         "Oliver": [
           1,
