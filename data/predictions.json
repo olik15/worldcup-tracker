@@ -596,7 +596,10 @@
       "group": "H",
       "home": "SAU",
       "away": "URY",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": [
           0,
