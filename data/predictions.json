@@ -710,7 +710,10 @@
       "group": "J",
       "home": "ARG",
       "away": "ALG",
-      "result": null,
+      "result": [
+        3,
+        0
+      ],
       "predictions": {
         "Oliver": [
           1,
