@@ -784,7 +784,10 @@
       "group": "K",
       "home": "POR",
       "away": "CON",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": [
           4,
