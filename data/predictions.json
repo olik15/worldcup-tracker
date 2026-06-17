@@ -1352,6 +1352,22 @@
       }
     },
     {
+      "id": "r2f4",
+      "round": 2,
+      "group": "A",
+      "home": "RSA",
+      "away": "CZE",
+      "result": null,
+      "predictions": {
+        "Oliver": null,
+        "Cem": null,
+        "Dad": null,
+        "Shaun": null,
+        "Tadlik": null,
+        "Claude": null
+      }
+    },
+    {
       "id": "r3a1",
       "round": 3,
       "group": "A",
