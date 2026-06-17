@@ -19,10 +19,19 @@ jobs:
         env:
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
 
-      - name: Commit if anything changed
+      - name: Commit and deploy if anything changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/predictions.json
-          git diff --staged --quiet && echo "nothing to commit" || \
-            git commit -m "Auto-update results $(date -u '+%Y-%m-%d %H:%M UTC')" && git push
+          if git diff --staged --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "Auto-update results $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+            npm install -g netlify-cli --silent
+            netlify deploy --dir . --prod
+          fi
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
