@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": "school-algo-exam",
+      "area": "school",
+      "title": "Algorithms final exam",
+      "due": "2026-06-14",
+      "notes": "Study dynamic programming and graph algorithms",
+      "done": false
+    },
+    {
+      "id": "work-sprint-review",
+      "area": "work",
+      "title": "Sprint review presentation",
+      "due": "2026-06-17",
+      "notes": "Prepare slides for the Q2 retrospective",
+      "done": false
+    },
+    {
+      "id": "school-thesis-ch3",
+      "area": "school",
+      "title": "Submit thesis chapter 3 draft",
+      "due": "2026-06-19",
+      "notes": "Focus on the methodology section",
+      "done": false
+    },
+    {
+      "id": "event-dentist",
+      "area": "event",
+      "title": "Dentist appointment",
+      "due": "2026-06-22",
+      "notes": "10:30am — bring insurance card",
+      "done": false
+    },
+    {
+      "id": "work-q2-report",
+      "area": "work",
+      "title": "Submit Q2 financial report",
+      "due": "2026-07-05",
+      "notes": "",
+      "done": false
+    },
+    {
+      "id": "personal-gym",
+      "area": "personal",
+      "title": "Gym 4× per week",
+      "due": null,
+      "notes": "Ongoing habit goal",
+      "done": false
+    },
+    {
+      "id": "school-lab-report",
+      "area": "school",
+      "title": "Physics lab report",
+      "due": "2026-06-10",
+      "notes": "Already submitted",
+      "done": true
+    }
+  ]
+}
