@@ -1877,12 +1877,12 @@
         "dark_horse": "\u2014"
       },
       "Shaun": {
-        "golden_boot": null,
-        "winner": null,
+        "golden_boot": "Messi",
+        "winner": "France",
         "biggest_upset": null,
-        "goals_final": null,
-        "best_gk": null,
-        "dark_horse": null
+        "goals_final": "3",
+        "best_gk": "Jordan Pickford",
+        "dark_horse": "Morocco"
       },
       "Tadlik": {
         "golden_boot": "Mbapp\u00e9",
