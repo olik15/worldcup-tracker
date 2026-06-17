@@ -673,7 +673,10 @@
       "group": "I",
       "home": "IRA",
       "away": "NOR",
-      "result": null,
+      "result": [
+        1,
+        4
+      ],
       "predictions": {
         "Oliver": [
           1,
