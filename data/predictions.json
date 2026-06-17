@@ -855,7 +855,10 @@
       "group": "L",
       "home": "ENG",
       "away": "CRO",
-      "result": null,
+      "result": [
+        4,
+        2
+      ],
       "predictions": {
         "Oliver": [
           2,
