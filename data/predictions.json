@@ -895,7 +895,10 @@
       "group": "L",
       "home": "GHA",
       "away": "PAN",
-      "result": null,
+      "result": [
+        1,
+        0
+      ],
       "predictions": {
         "Oliver": [
           1,
