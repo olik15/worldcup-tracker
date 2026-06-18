@@ -821,7 +821,10 @@
       "group": "K",
       "home": "UZB",
       "away": "COL",
-      "result": null,
+      "result": [
+        1,
+        3
+      ],
       "predictions": {
         "Oliver": [
           0,
