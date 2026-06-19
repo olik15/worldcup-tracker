@@ -995,7 +995,10 @@
       "group": "A",
       "home": "USA",
       "away": "AUS",
-      "result": null,
+      "result": [
+        2,
+        0
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
