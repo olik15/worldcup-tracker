@@ -973,7 +973,10 @@
       "group": "A",
       "home": "MEX",
       "away": "KOR",
-      "result": null,
+      "result": [
+        1,
+        0
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
