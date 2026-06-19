@@ -951,7 +951,10 @@
       "group": "A",
       "home": "CAN",
       "away": "QAT",
-      "result": null,
+      "result": [
+        6,
+        0
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
