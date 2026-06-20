@@ -1017,7 +1017,10 @@
       "group": "B",
       "home": "SCO",
       "away": "MAR",
-      "result": null,
+      "result": [
+        0,
+        1
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
