@@ -1061,7 +1061,10 @@
       "group": "B",
       "home": "TUR",
       "away": "PAR",
-      "result": null,
+      "result": [
+        0,
+        1
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
