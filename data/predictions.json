@@ -1104,7 +1104,10 @@
       "group": "B",
       "home": "NED",
       "away": "SWE",
-      "result": null,
+      "result": [
+        5,
+        1
+      ],
       "predictions": {
         "Oliver": [
           3,
