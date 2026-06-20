@@ -1456,7 +1456,10 @@
       "group": "A",
       "home": "CZE",
       "away": "RSA",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": [
           2,
