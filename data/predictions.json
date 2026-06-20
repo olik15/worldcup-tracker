@@ -1129,7 +1129,10 @@
       "group": "C",
       "home": "GER",
       "away": "CIV",
-      "result": null,
+      "result": [
+        2,
+        1
+      ],
       "predictions": {
         "Oliver": [
           2,
