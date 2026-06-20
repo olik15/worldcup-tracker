@@ -1039,7 +1039,10 @@
       "group": "B",
       "home": "BRA",
       "away": "HAI",
-      "result": null,
+      "result": [
+        3,
+        0
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
