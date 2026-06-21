@@ -1154,7 +1154,10 @@
       "group": "C",
       "home": "ECU",
       "away": "CUR",
-      "result": null,
+      "result": [
+        0,
+        0
+      ],
       "predictions": {
         "Oliver": [
           3,
