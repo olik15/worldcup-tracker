@@ -1204,7 +1204,10 @@
       "group": "C",
       "home": "ESP",
       "away": "SAU",
-      "result": null,
+      "result": [
+        5,
+        0
+      ],
       "predictions": {
         "Oliver": [
           0,
