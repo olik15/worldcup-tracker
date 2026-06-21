@@ -1205,7 +1205,7 @@
       "home": "ESP",
       "away": "SAU",
       "result": [
-        5,
+        4,
         0
       ],
       "predictions": {
@@ -1229,7 +1229,10 @@
       "group": "D",
       "home": "BEL",
       "away": "IRN",
-      "result": null,
+      "result": [
+        0,
+        0
+      ],
       "predictions": {
         "Oliver": [
           0,
