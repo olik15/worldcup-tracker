@@ -1179,7 +1179,10 @@
       "group": "C",
       "home": "TUN",
       "away": "JAP",
-      "result": null,
+      "result": [
+        0,
+        4
+      ],
       "predictions": {
         "Oliver": [
           0,
