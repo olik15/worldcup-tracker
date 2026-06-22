@@ -1279,7 +1279,10 @@
       "group": "D",
       "home": "NZL",
       "away": "EGY",
-      "result": null,
+      "result": [
+        1,
+        3
+      ],
       "predictions": {
         "Oliver": [
           0,
