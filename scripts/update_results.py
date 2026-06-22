@@ -18,6 +18,8 @@ ALIASES = {
     "czech republic":                "czechia",
     "bosnia and herzegovina":        "bosnia",
     "bosnia & herzegovina":          "bosnia",
+    "bosnia-herzegovina":            "bosnia",
+    "bosnia herzegovina":            "bosnia",
     "dr congo":                      "dr congo",
     "congo dr":                      "dr congo",
     "congo, dr":                     "dr congo",
