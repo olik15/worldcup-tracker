@@ -1,35 +1,75 @@
 #!/usr/bin/env python3
 """Fetch finished WC 2026 match results from football-data.org and update predictions.json."""
-import json, os, sys
+import json, os, sys, unicodedata
 import urllib.request, urllib.error
 
 API_KEY = os.environ.get('FOOTBALL_DATA_API_KEY', '')
 API_URL = 'https://api.football-data.org/v4/competitions/WC/matches?status=FINISHED'
 
-# Normalise names that differ between the API and our teams dict
 ALIASES = {
+    # Countries with non-obvious API names
     "iran":                          "iran",
+    "ir iran":                       "iran",
     "korea republic":                "south korea",
     "republic of korea":             "south korea",
     "united states":                 "usa",
+    "united states of america":      "usa",
     "czechia":                       "czechia",
     "czech republic":                "czechia",
     "bosnia and herzegovina":        "bosnia",
     "bosnia & herzegovina":          "bosnia",
     "dr congo":                      "dr congo",
     "congo dr":                      "dr congo",
+    "congo, dr":                     "dr congo",
     "democratic republic of congo":  "dr congo",
+    "democratic republic of the congo": "dr congo",
     "curacao":                       "curaçao",
+    "curaçao":                       "curaçao",
     "turkey":                        "türkiye",
+    "turkiye":                       "türkiye",
+    "cape verde":                    "cape verde",
     "cape verde islands":            "cape verde",
+    "cabo verde":                    "cape verde",
     "ivory coast":                   "ivory coast",
     "côte d'ivoire":                 "ivory coast",
     "cote d'ivoire":                 "ivory coast",
+    "côte divoire":                  "ivory coast",
+    "scotland":                      "scotland",
+    "south africa":                  "south africa",
+    "saudi arabia":                  "saudi arabia",
+    "ksa":                           "saudi arabia",
+    "new zealand":                   "new zealand",
+    "zealand":                       "new zealand",
+    "australia":                     "australia",
+    "paraguay":                      "paraguay",
+    "morocco":                       "morocco",
+    "japan":                         "japan",
+    "algeria":                       "algeria",
+    "jordan":                        "jordan",
+    "norway":                        "norway",
+    "senegal":                       "senegal",
+    "uzbekistan":                    "uzbekistan",
+    "colombia":                      "colombia",
+    "panama":                        "panama",
+    "croatia":                       "croatia",
+    "ghana":                         "ghana",
+    "england":                       "england",
+    "portugal":                      "portugal",
+    "iraq":                          "iraq",
+    "austria":                       "austria",
 }
+
+def strip_accents(s):
+    return ''.join(
+        c for c in unicodedata.normalize('NFD', s)
+        if unicodedata.category(c) != 'Mn'
+    )
 
 def norm(name):
     n = name.lower().strip()
-    return ALIASES.get(n, n)
+    # strip accents for matching
+    n_plain = strip_accents(n)
+    return ALIASES.get(n, ALIASES.get(n_plain, n))
 
 def main():
     if not API_KEY:
@@ -39,23 +79,29 @@ def main():
     req = urllib.request.Request(API_URL, headers={'X-Auth-Token': API_KEY})
     try:
         with urllib.request.urlopen(req, timeout=15) as r:
-            api_matches = json.loads(r.read())['matches']
+            payload = json.loads(r.read())
+            api_matches = payload['matches']
     except Exception as e:
         print(f"API fetch failed: {e}")
         sys.exit(0)
 
+    print(f"API returned {len(api_matches)} finished matches")
+
     with open('data/predictions.json') as f:
         data = json.load(f)
 
-    # Reverse map: normalised name → list of team codes (some names map to two codes e.g. Spain)
+    # Reverse map: normalised name → list of team codes
     name_to_codes = {}
     for code, name in data['teams'].items():
-        name_to_codes.setdefault(norm(name), []).append(code)
+        key = norm(name)
+        name_to_codes.setdefault(key, []).append(code)
 
     # Match lookup keyed by (home_code, away_code)
     match_lookup = {(m['home'], m['away']): m for m in data['matches']}
 
     changed = False
+    unmatched = []
+
     for am in api_matches:
         if am.get('status') != 'FINISHED':
             continue
@@ -64,18 +110,43 @@ def main():
         if hg is None or ag is None:
             continue
 
-        h_norm = norm(am['homeTeam']['name'])
-        a_norm = norm(am['awayTeam']['name'])
+        h_raw = am['homeTeam']['name']
+        a_raw = am['awayTeam']['name']
+        h_norm = norm(h_raw)
+        a_norm = norm(a_raw)
 
-        for hc in name_to_codes.get(h_norm, []):
-            for ac in name_to_codes.get(a_norm, []):
+        h_codes = name_to_codes.get(h_norm, [])
+        a_codes = name_to_codes.get(a_norm, [])
+
+        matched = False
+        for hc in h_codes:
+            for ac in a_codes:
+                # Try normal order
                 if (hc, ac) in match_lookup:
                     m = match_lookup[(hc, ac)]
                     new = [hg, ag]
                     if m['result'] != new:
                         m['result'] = new
-                        print(f"  {hc} {hg}–{ag} {ac}")
+                        print(f"  Updated: {hc} {hg}–{ag} {ac}")
                         changed = True
+                    matched = True
+                # Try swapped order (our home/away might differ from API)
+                elif (ac, hc) in match_lookup:
+                    m = match_lookup[(ac, hc)]
+                    new = [ag, hg]  # swap scores too
+                    if m['result'] != new:
+                        m['result'] = new
+                        print(f"  Updated (swapped): {ac} {ag}–{hg} {hc}")
+                        changed = True
+                    matched = True
+
+        if not matched:
+            unmatched.append(f"{h_raw} ({h_norm}) vs {a_raw} ({a_norm})")
+
+    if unmatched:
+        print(f"Unmatched API matches ({len(unmatched)}):")
+        for u in unmatched:
+            print(f"  ? {u}")
 
     if changed:
         with open('data/predictions.json', 'w') as f:
