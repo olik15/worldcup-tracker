@@ -1352,7 +1352,10 @@
       "group": "D",
       "home": "ARG",
       "away": "AUT",
-      "result": null,
+      "result": [
+        2,
+        0
+      ],
       "predictions": {
         "Oliver": [
           4,
