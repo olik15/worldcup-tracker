@@ -932,7 +932,10 @@
       "group": "A",
       "home": "SUI",
       "away": "BOS",
-      "result": null,
+      "result": [
+        4,
+        1
+      ],
       "predictions": {
         "Oliver": [
           3,
