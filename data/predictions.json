@@ -1254,7 +1254,10 @@
       "group": "D",
       "home": "URY",
       "away": "CPV",
-      "result": null,
+      "result": [
+        2,
+        2
+      ],
       "predictions": {
         "Oliver": [
           0,
