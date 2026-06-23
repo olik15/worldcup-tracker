@@ -1436,7 +1436,10 @@
       "group": "E",
       "home": "JOR",
       "away": "ALG",
-      "result": null,
+      "result": [
+        1,
+        2
+      ],
       "predictions": {
         "Oliver": [
           0,
