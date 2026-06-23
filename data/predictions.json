@@ -1492,7 +1492,10 @@
       "group": "F",
       "home": "ENG",
       "away": "GHA",
-      "result": null,
+      "result": [
+        0,
+        0
+      ],
       "predictions": {
         "Oliver": [
           1,
