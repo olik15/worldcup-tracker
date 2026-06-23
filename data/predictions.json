@@ -1380,7 +1380,10 @@
       "group": "E",
       "home": "FRA",
       "away": "IRQ",
-      "result": null,
+      "result": [
+        3,
+        0
+      ],
       "predictions": {
         "Oliver": [
           3,
