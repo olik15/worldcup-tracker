@@ -1408,7 +1408,10 @@
       "group": "E",
       "home": "NOR",
       "away": "SEN",
-      "result": null,
+      "result": [
+        3,
+        2
+      ],
       "predictions": {
         "Oliver": [
           3,
