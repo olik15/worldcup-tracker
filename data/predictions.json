@@ -1548,7 +1548,10 @@
       "group": "F",
       "home": "COL",
       "away": "COD",
-      "result": null,
+      "result": [
+        1,
+        0
+      ],
       "predictions": {
         "Oliver": [
           3,
