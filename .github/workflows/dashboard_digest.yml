@@ -1,0 +1,19 @@
+name: Dashboard Daily Digest
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 08:00 CET (winter) / 09:00 CEST (summer)
+  workflow_dispatch:        # manual trigger from Actions tab for testing
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Send digest email
+        run: python3 scripts/send_digest.py
+        env:
+          RESEND_API_KEY:    ${{ secrets.RESEND_API_KEY }}
+          DIGEST_TO_EMAIL:   ${{ secrets.DIGEST_TO_EMAIL }}
+          DIGEST_FROM_EMAIL: ${{ secrets.DIGEST_FROM_EMAIL }}
