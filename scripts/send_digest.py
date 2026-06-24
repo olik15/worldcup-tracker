@@ -104,7 +104,7 @@ def main():
     with open(DATA_PATH) as f:
         data = json.load(f)
 
-    groups = {'overdue': [], 'today': [], 'this-week': []}
+    groups = {'overdue': [], 'today': [], 'this-week': [], 'upcoming': [], 'no-date': []}
     for item in data['items']:
         urg = classify(item, today)
         if urg in groups:
@@ -112,10 +112,6 @@ def main():
 
     for key in groups:
         groups[key].sort(key=lambda x: x.get('due') or '')
-
-    if not any(groups.values()):
-        print('Nothing urgent today — skipping digest')
-        sys.exit(0)
 
     date_str = today.strftime('%a %d %b')
     parts = []
@@ -126,7 +122,9 @@ def main():
     body = (
         section_html('Overdue',   groups['overdue'],    'overdue',    today, '#902020') +
         section_html('Due Today', groups['today'],      'today',      today, '#b85c00') +
-        section_html('This Week', groups['this-week'],  'this-week',  today, '#7a6200')
+        section_html('This Week', groups['this-week'],  'this-week',  today, '#7a6200') +
+        section_html('Upcoming',  groups['upcoming'],   'upcoming',   today, '#2a6e38') +
+        section_html('No Date',   groups['no-date'],    'no-date',    today, '#888888')
     )
 
     html = (
