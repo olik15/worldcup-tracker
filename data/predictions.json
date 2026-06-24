@@ -1645,7 +1645,10 @@
       "group": "B",
       "home": "SUI",
       "away": "CAN",
-      "result": null,
+      "result": [
+        2,
+        1
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
@@ -1667,7 +1670,10 @@
       "group": "B",
       "home": "BOS",
       "away": "QAT",
-      "result": null,
+      "result": [
+        3,
+        1
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
