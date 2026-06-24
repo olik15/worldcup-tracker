@@ -1520,7 +1520,10 @@
       "group": "F",
       "home": "PAN",
       "away": "CRO",
-      "result": null,
+      "result": [
+        0,
+        1
+      ],
       "predictions": {
         "Oliver": [
           0,
