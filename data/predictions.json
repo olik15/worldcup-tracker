@@ -1601,7 +1601,10 @@
       "group": "A",
       "home": "RSA",
       "away": "KOR",
-      "result": null,
+      "result": [
+        1,
+        0
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
@@ -1623,7 +1626,10 @@
       "group": "A",
       "home": "CZE",
       "away": "MEX",
-      "result": null,
+      "result": [
+        0,
+        3
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
