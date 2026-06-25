@@ -1795,7 +1795,10 @@
       "group": "E",
       "home": "CUR",
       "away": "CIV",
-      "result": null,
+      "result": [
+        0,
+        2
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
@@ -1817,7 +1820,10 @@
       "group": "E",
       "home": "ECU",
       "away": "GER",
-      "result": null,
+      "result": [
+        2,
+        1
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
