@@ -1695,7 +1695,10 @@
       "group": "C",
       "home": "MAR",
       "away": "HAI",
-      "result": null,
+      "result": [
+        4,
+        2
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
@@ -1717,7 +1720,10 @@
       "group": "C",
       "home": "SCO",
       "away": "BRA",
-      "result": null,
+      "result": [
+        0,
+        3
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
