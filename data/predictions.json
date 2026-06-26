@@ -1845,7 +1845,10 @@
       "group": "F",
       "home": "TUN",
       "away": "NED",
-      "result": null,
+      "result": [
+        1,
+        3
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
@@ -1867,7 +1870,10 @@
       "group": "F",
       "home": "JAP",
       "away": "SWE",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
