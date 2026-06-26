@@ -6,8 +6,3 @@
   for = "/data/*"
   [headers.values]
     Cache-Control = "no-cache"
-
-[[headers]]
-  for = "/dashboard/data/*"
-  [headers.values]
-    Cache-Control = "no-cache"
