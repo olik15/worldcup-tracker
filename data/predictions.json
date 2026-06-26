@@ -1989,7 +1989,10 @@
       "group": "I",
       "home": "NOR",
       "away": "FRA",
-      "result": null,
+      "result": [
+        1,
+        4
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
@@ -2011,7 +2014,10 @@
       "group": "I",
       "home": "SEN",
       "away": "IRQ",
-      "result": null,
+      "result": [
+        5,
+        0
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
