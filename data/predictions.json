@@ -1751,7 +1751,10 @@
       "group": "D",
       "home": "PAR",
       "away": "AUS",
-      "result": null,
+      "result": [
+        0,
+        0
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
@@ -1773,7 +1776,10 @@
       "group": "D",
       "home": "TUR",
       "away": "USA",
-      "result": null,
+      "result": [
+        3,
+        2
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
