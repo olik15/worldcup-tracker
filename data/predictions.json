@@ -1901,7 +1901,10 @@
       "group": "G",
       "home": "EGY",
       "away": "IRN",
-      "result": null,
+      "result": [
+        1,
+        1
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
@@ -1923,7 +1926,10 @@
       "group": "G",
       "home": "NZL",
       "away": "BEL",
-      "result": null,
+      "result": [
+        1,
+        5
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
