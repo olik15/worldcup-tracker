@@ -2139,7 +2139,10 @@
       "group": "L",
       "home": "CRO",
       "away": "GHA",
-      "result": null,
+      "result": [
+        2,
+        1
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
@@ -2161,7 +2164,10 @@
       "group": "L",
       "home": "PAN",
       "away": "ENG",
-      "result": null,
+      "result": [
+        0,
+        2
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
