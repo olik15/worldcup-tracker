@@ -1945,7 +1945,10 @@
       "group": "H",
       "home": "URY",
       "away": "ESP",
-      "result": null,
+      "result": [
+        0,
+        1
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
@@ -1967,7 +1970,10 @@
       "group": "H",
       "home": "CPV",
       "away": "SAU",
-      "result": null,
+      "result": [
+        0,
+        0
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
