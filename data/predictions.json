@@ -2095,7 +2095,10 @@
       "group": "K",
       "home": "COD",
       "away": "UZB",
-      "result": null,
+      "result": [
+        3,
+        1
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
@@ -2117,7 +2120,10 @@
       "group": "K",
       "home": "COL",
       "away": "POR",
-      "result": null,
+      "result": [
+        0,
+        0
+      ],
       "predictions": {
         "Oliver": null,
         "Cem": null,
