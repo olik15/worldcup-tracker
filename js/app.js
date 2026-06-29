@@ -62,6 +62,7 @@ function renderAll() {
   renderLeaderboard(_data);
   renderMatches(_data);
   renderBonus(_data);
+  renderPlayoffs(_data);
 }
 
 function visiblePlayers(data) {
@@ -238,6 +239,134 @@ function renderBonus(data) {
   html += '</div>';
 
   document.getElementById('bonus').innerHTML = html;
+}
+
+/* ── Playoffs ───────────────────────────────────────── */
+function renderPlayoffs(data) {
+  const po = data.playoffs;
+  if (!po) return;
+
+  const scoring = po.scoring;
+  const results = po.results;
+  const players = po.players;
+
+  function isCorrect(pick, resultList) {
+    if (!pick || !resultList || resultList.length === 0) return false;
+    return resultList.includes(pick);
+  }
+
+  function isWrong(pick, resultList) {
+    if (!pick) return false;
+    if (!resultList || resultList.length === 0) return false;
+    return !resultList.includes(pick);
+  }
+
+  function pickClass(pick, correctList, isChampion) {
+    if (!pick) return 'po-null';
+    if (!correctList || correctList.length === 0) return 'po-pending';
+    if (isCorrect(pick, correctList)) return isChampion ? 'po-correct-champion' : 'po-correct';
+    return 'po-wrong';
+  }
+
+  function calcPoPoints(pid) {
+    const preds = po.predictions[pid];
+    if (!preds) return 0;
+    let pts = 0;
+
+    if (results.champion && preds.champion === results.champion) pts += scoring.champion;
+    if (results.runner_up && preds.runner_up === results.runner_up) pts += scoring.runner_up;
+
+    const semis = results.semi_finalists || [];
+    (preds.semi_finalists || []).forEach(t => { if (t && semis.includes(t)) pts += scoring.semi_finalist; });
+
+    const qfs = results.quarter_finalists || [];
+    (preds.quarter_finalists || []).forEach(t => { if (t && qfs.includes(t)) pts += scoring.quarter_finalist; });
+
+    return pts;
+  }
+
+  function renderPick(pick, correctList, isChampion) {
+    const cls = pickClass(pick, correctList, isChampion);
+    const displayName = pick || 'TBD';
+    const displayCls = pick ? cls : 'po-null';
+    const displayText = pick ? pick : 'TBD';
+
+    let badge = '';
+    if (pick && correctList && correctList.length > 0) {
+      if (isCorrect(pick, correctList)) {
+        const amount = isChampion ? scoring.champion
+          : correctList === [results.runner_up] ? scoring.runner_up
+          : 0;
+        badge = `<span class="po-pts-badge po-pts-green">✓</span>`;
+      } else {
+        badge = `<span class="po-pts-badge po-pts-muted">✗</span>`;
+      }
+    }
+
+    if (isChampion) {
+      return `<div class="po-pick po-pick-champion ${displayCls}">${displayText}${badge}</div>`;
+    }
+    return `<div class="po-pick ${displayCls}">${displayText}${badge}</div>`;
+  }
+
+  const champResult = results.champion ? [results.champion] : [];
+  const runnerResult = results.runner_up ? [results.runner_up] : [];
+  const semisResult = results.semi_finalists || [];
+  const qfsResult = results.quarter_finalists || [];
+
+  let html = `
+    <div class="po-header">
+      <div class="po-header-label">Knockout stage predictions</div>
+      <h2 class="po-header-title">The <em>playoffs.</em></h2>
+      <div class="po-header-sub">Oliver · Shaun · Dad · Claude &nbsp;·&nbsp; Max 48 pts per player</div>
+      <div class="po-scoring-note">
+        <div class="po-scoring-item"><strong>20</strong> Champion</div>
+        <div class="po-scoring-item"><strong>10</strong> Runner-up</div>
+        <div class="po-scoring-item"><strong>5</strong> Semi-finalist</div>
+        <div class="po-scoring-item"><strong>2</strong> Quarter-finalist</div>
+      </div>
+    </div>
+    <div class="po-grid">`;
+
+  players.forEach(pid => {
+    const preds = po.predictions[pid] || {};
+    const pts = calcPoPoints(pid);
+
+    const champPick = preds.champion || null;
+    const runnerPick = preds.runner_up || null;
+    const semiPicks = preds.semi_finalists || [null, null];
+    const qfPicks = preds.quarter_finalists || [null, null, null, null];
+
+    html += `<div class="po-col">
+      <div class="po-col-head">
+        <div class="po-col-name">${pid}</div>
+        <div class="po-col-pts">${pts}</div>
+      </div>
+
+      <div class="po-section">
+        <div class="po-section-label">Champion <span>+20</span></div>
+        ${renderPick(champPick, champResult, true)}
+      </div>
+
+      <div class="po-section">
+        <div class="po-section-label">Runner-up <span>+10</span></div>
+        ${renderPick(runnerPick, runnerResult, false)}
+      </div>
+
+      <div class="po-section">
+        <div class="po-section-label">Semi-finalists <span>+5 ea.</span></div>
+        ${semiPicks.map(t => renderPick(t, semisResult, false)).join('')}
+      </div>
+
+      <div class="po-section">
+        <div class="po-section-label">Quarter-finalists <span>+2 ea.</span></div>
+        ${qfPicks.map(t => renderPick(t, qfsResult, false)).join('')}
+      </div>
+    </div>`;
+  });
+
+  html += `</div>`;
+  document.getElementById('playoffs').innerHTML = html;
 }
 
 init();

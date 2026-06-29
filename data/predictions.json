@@ -2281,5 +2281,83 @@
       "Tadlik": null,
       "Claude": null
     }
+  },
+  "playoffs": {
+    "scoring": {
+      "champion": 20,
+      "runner_up": 10,
+      "semi_finalist": 5,
+      "quarter_finalist": 2
+    },
+    "players": [
+      "Oliver",
+      "Shaun",
+      "Dad",
+      "Claude"
+    ],
+    "predictions": {
+      "Oliver": {
+        "champion": "Netherlands",
+        "runner_up": null,
+        "semi_finalists": [
+          null,
+          null
+        ],
+        "quarter_finalists": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Shaun": {
+        "champion": "France",
+        "runner_up": null,
+        "semi_finalists": [
+          null,
+          null
+        ],
+        "quarter_finalists": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Dad": {
+        "champion": "Argentina",
+        "runner_up": null,
+        "semi_finalists": [
+          null,
+          null
+        ],
+        "quarter_finalists": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Claude": {
+        "champion": "France",
+        "runner_up": "Germany",
+        "semi_finalists": [
+          "Brazil",
+          "England"
+        ],
+        "quarter_finalists": [
+          "Spain",
+          "Argentina",
+          "Netherlands",
+          "Japan"
+        ]
+      }
+    },
+    "results": {
+      "champion": null,
+      "runner_up": null,
+      "semi_finalists": [],
+      "quarter_finalists": []
+    }
   }
 }

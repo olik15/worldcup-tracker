@@ -427,6 +427,151 @@ main { width: 100%; }
   color: var(--muted);
 }
 
+/* ── Playoffs ───────────────────────────────────────── */
+.tab-btn--playoffs { color: var(--gold); }
+.tab-btn--playoffs:hover { color: var(--gold); opacity: 0.75; }
+.tab-btn--playoffs.active { color: var(--gold); background: rgba(138,98,0,0.10); }
+
+.po-header {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 40px;
+}
+.po-header-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.po-header-title {
+  font-weight: 300;
+  font-size: 64px;
+  letter-spacing: -2.4px;
+  line-height: 0.95;
+}
+.po-header-title em { font-style: normal; font-weight: 500; color: var(--gold); }
+.po-header-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+
+.po-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.po-col {
+  background: var(--paper);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.po-col-head {
+  padding: 20px 22px 18px;
+  border-bottom: 2px solid var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.po-col-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.po-col-pts {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: var(--accent);
+}
+
+.po-section {
+  padding: 0 22px;
+  border-bottom: 1px solid var(--bg);
+}
+.po-section:last-child { border-bottom: none; }
+
+.po-section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 14px 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.po-section-label span { opacity: 0.55; }
+
+.po-pick {
+  padding: 10px 0 14px;
+  border-top: 1px solid var(--rule);
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+  line-height: 1.1;
+}
+.po-pick:first-of-type { border-top: none; }
+
+.po-pick-champion {
+  padding: 14px 0 18px;
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: -0.6px;
+  line-height: 1;
+  border-top: none;
+  position: relative;
+}
+.po-pick-champion::before {
+  content: '★';
+  font-size: 10px;
+  color: var(--gold);
+  margin-right: 7px;
+  vertical-align: 3px;
+}
+
+.po-null { color: var(--muted); font-style: italic; font-size: 13px; font-weight: 400; letter-spacing: 0; }
+.po-pending { color: var(--ink); }
+.po-correct { color: var(--green); }
+.po-correct-champion { color: var(--green); font-weight: 500; }
+.po-wrong { color: var(--red); opacity: 0.6; text-decoration: line-through; }
+
+.po-pts-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  float: right;
+  margin-top: 3px;
+}
+.po-pts-green { color: var(--green); }
+.po-pts-muted { color: var(--muted); }
+
+.po-scoring-note {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.po-scoring-item {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.po-scoring-item strong { color: var(--gold); font-weight: 500; }
+
 /* ── Mobile ─────────────────────────────────────────── */
 @media (max-width: 760px) {
   .page { padding: 28px 24px 64px; gap: 36px; }
