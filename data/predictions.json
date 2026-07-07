@@ -2367,7 +2367,10 @@
           {
             "home": "RSA",
             "away": "CAN",
-            "result": null,
+            "result": [
+              0,
+              1
+            ],
             "preds": {
               "Oliver": [
                 1,
@@ -2379,12 +2382,16 @@
                 0,
                 2
               ]
-            }
+            },
+            "winner": "away"
           },
           {
             "home": "BRA",
             "away": "JAP",
-            "result": null,
+            "result": [
+              2,
+              1
+            ],
             "preds": {
               "Oliver": [
                 1,
@@ -2402,12 +2409,16 @@
                 3,
                 0
               ]
-            }
+            },
+            "winner": "home"
           },
           {
             "home": "GER",
             "away": "PAR",
-            "result": null,
+            "result": [
+              4,
+              5
+            ],
             "preds": {
               "Oliver": [
                 4,
@@ -2425,12 +2436,16 @@
                 2,
                 1
               ]
-            }
+            },
+            "winner": "away"
           },
           {
             "home": "NED",
             "away": "MAR",
-            "result": null,
+            "result": [
+              3,
+              4
+            ],
             "preds": {
               "Oliver": [
                 3,
@@ -2448,12 +2463,16 @@
                 2,
                 1
               ]
-            }
+            },
+            "winner": "away"
           },
           {
             "home": "CIV",
             "away": "NOR",
-            "result": null,
+            "result": [
+              1,
+              2
+            ],
             "preds": {
               "Oliver": [
                 0,
@@ -2468,12 +2487,16 @@
                 1,
                 2
               ]
-            }
+            },
+            "winner": "away"
           },
           {
             "home": "FRA",
             "away": "SWE",
-            "result": null,
+            "result": [
+              3,
+              0
+            ],
             "preds": {
               "Oliver": [
                 2,
@@ -2491,12 +2514,16 @@
                 3,
                 0
               ]
-            }
+            },
+            "winner": "home"
           },
           {
             "home": "MEX",
             "away": "ECU",
-            "result": null,
+            "result": [
+              2,
+              0
+            ],
             "preds": {
               "Oliver": [
                 0,
@@ -2514,12 +2541,16 @@
                 1,
                 2
               ]
-            }
+            },
+            "winner": "home"
           },
           {
             "home": "ENG",
             "away": "CON",
-            "result": null,
+            "result": [
+              2,
+              1
+            ],
             "preds": {
               "Oliver": [
                 3,
@@ -2537,12 +2568,16 @@
                 4,
                 0
               ]
-            }
+            },
+            "winner": "home"
           },
           {
             "home": "BEL",
             "away": "SEN",
-            "result": null,
+            "result": [
+              3,
+              2
+            ],
             "preds": {
               "Oliver": [
                 1,
@@ -2560,12 +2595,16 @@
                 2,
                 1
               ]
-            }
+            },
+            "winner": "home"
           },
           {
             "home": "USA",
             "away": "BOS",
-            "result": null,
+            "result": [
+              2,
+              0
+            ],
             "preds": {
               "Oliver": [
                 1,
@@ -2583,12 +2622,16 @@
                 2,
                 1
               ]
-            }
+            },
+            "winner": "home"
           },
           {
             "home": "SPA",
             "away": "AUR",
-            "result": null,
+            "result": [
+              3,
+              0
+            ],
             "preds": {
               "Oliver": [
                 2,
@@ -2606,12 +2649,16 @@
                 3,
                 0
               ]
-            }
+            },
+            "winner": "home"
           },
           {
             "home": "POR",
             "away": "CRO",
-            "result": null,
+            "result": [
+              2,
+              1
+            ],
             "preds": {
               "Oliver": [
                 1,
@@ -2629,12 +2676,16 @@
                 2,
                 1
               ]
-            }
+            },
+            "winner": "home"
           },
           {
             "home": "SUI",
             "away": "ALG",
-            "result": null,
+            "result": [
+              2,
+              0
+            ],
             "preds": {
               "Oliver": [
                 4,
@@ -2652,12 +2703,16 @@
                 2,
                 0
               ]
-            }
+            },
+            "winner": "home"
           },
           {
             "home": "AUS",
             "away": "EGY",
-            "result": null,
+            "result": [
+              3,
+              5
+            ],
             "preds": {
               "Oliver": [
                 1,
@@ -2675,12 +2730,16 @@
                 1,
                 2
               ]
-            }
+            },
+            "winner": "away"
           },
           {
             "home": "ARG",
             "away": "CAP",
-            "result": null,
+            "result": [
+              3,
+              2
+            ],
             "preds": {
               "Oliver": [
                 4,
@@ -2698,12 +2757,16 @@
                 4,
                 0
               ]
-            }
+            },
+            "winner": "home"
           },
           {
             "home": "COL",
             "away": "GHA",
-            "result": null,
+            "result": [
+              1,
+              0
+            ],
             "preds": {
               "Oliver": [
                 1,
@@ -2721,7 +2784,8 @@
                 2,
                 1
               ]
-            }
+            },
+            "winner": "home"
           }
         ]
       },
@@ -2732,7 +2796,10 @@
           {
             "home": "CAN",
             "away": "MAR",
-            "result": null,
+            "result": [
+              0,
+              3
+            ],
             "preds": {
               "Oliver": [
                 1,
@@ -2747,12 +2814,16 @@
                 0,
                 2
               ]
-            }
+            },
+            "winner": "away"
           },
           {
             "home": "PAR",
             "away": "FRA",
-            "result": null,
+            "result": [
+              0,
+              1
+            ],
             "preds": {
               "Oliver": [
                 0,
@@ -2767,12 +2838,16 @@
                 0,
                 3
               ]
-            }
+            },
+            "winner": "away"
           },
           {
             "home": "BRA",
             "away": "NOR",
-            "result": null,
+            "result": [
+              1,
+              2
+            ],
             "preds": {
               "Oliver": [
                 2,
@@ -2790,12 +2865,16 @@
                 2,
                 1
               ]
-            }
+            },
+            "winner": "away"
           },
           {
             "home": "MEX",
             "away": "ENG",
-            "result": null,
+            "result": [
+              2,
+              3
+            ],
             "preds": {
               "Oliver": [
                 1,
@@ -2813,12 +2892,16 @@
                 0,
                 2
               ]
-            }
+            },
+            "winner": "away"
           },
           {
             "home": "POR",
             "away": "SPA",
-            "result": null,
+            "result": [
+              0,
+              1
+            ],
             "preds": {
               "Oliver": [
                 1,
@@ -2836,12 +2919,16 @@
                 1,
                 2
               ]
-            }
+            },
+            "winner": "away"
           },
           {
             "home": "USA",
             "away": "BEL",
-            "result": null,
+            "result": [
+              1,
+              4
+            ],
             "preds": {
               "Oliver": [
                 3,
@@ -2859,7 +2946,8 @@
                 1,
                 2
               ]
-            }
+            },
+            "winner": "away"
           },
           {
             "home": "ARG",
