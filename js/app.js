@@ -366,6 +366,64 @@ function renderPlayoffs(data) {
   });
 
   html += `</div>`;
+
+  // Render knockout round match tables
+  if (po.rounds && po.rounds.length) {
+    po.rounds.forEach(round => {
+      html += `<div class="po-round-section">
+        <div class="po-round-header">${round.label}</div>`;
+
+      round.matches.forEach(match => {
+        const home = data.teams[match.home] ?? match.home;
+        const away = data.teams[match.away] ?? match.away;
+        const r = match.result;
+        const scoreTxt = r ? `${r[0]} – ${r[1]}` : 'TBD';
+        const scoreClass = r ? 'po-match-result' : 'po-match-result tbd';
+
+        html += `<div class="po-match-row">
+          <div class="po-match-teams">
+            <span class="po-team">${home}</span>
+            <span class="po-vs">vs</span>
+            <span class="po-team">${away}</span>
+            <span class="${scoreClass}">${scoreTxt}</span>
+          </div>
+          <div class="po-match-preds">`;
+
+        players.forEach(pid => {
+          const pred = match.preds[pid];
+          if (!pred) {
+            html += `<div class="po-mpred">
+              <div class="po-mpred-name">${pid}</div>
+              <div class="po-mpred-val c-null">—</div>
+            </div>`;
+            return;
+          }
+          let cls = 'c-pending', badge = '';
+          if (r) {
+            const predWinner = pred[0] > pred[1] ? 'H' : pred[0] < pred[1] ? 'A' : 'D';
+            const realWinner = r[0] > r[1] ? 'H' : r[0] < r[1] ? 'A' : 'D';
+            if (pred[0] === r[0] && pred[1] === r[1]) {
+              cls = 'c-exact'; badge = `<div class="pred-pts pts-exact">+3</div>`;
+            } else if (predWinner === realWinner) {
+              cls = 'c-correct'; badge = `<div class="pred-pts pts-correct">+1</div>`;
+            } else {
+              cls = 'c-wrong'; badge = `<div class="pred-pts pts-wrong">+0</div>`;
+            }
+          }
+          html += `<div class="po-mpred">
+            <div class="po-mpred-name">${pid}</div>
+            <div class="po-mpred-val ${cls}">${pred[0]}–${pred[1]}</div>
+            ${badge}
+          </div>`;
+        });
+
+        html += `</div></div>`;
+      });
+
+      html += `</div>`;
+    });
+  }
+
   document.getElementById('playoffs').innerHTML = html;
 }
 

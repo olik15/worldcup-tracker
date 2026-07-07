@@ -2340,16 +2340,16 @@
       },
       "Claude": {
         "champion": "France",
-        "runner_up": "Germany",
+        "runner_up": "Spain",
         "semi_finalists": [
-          "Brazil",
-          "England"
+          "France",
+          "Argentina"
         ],
         "quarter_finalists": [
+          "Morocco",
+          "Norway",
           "Spain",
-          "Argentina",
-          "Netherlands",
-          "Japan"
+          "Colombia"
         ]
       }
     },
@@ -2358,6 +2358,557 @@
       "runner_up": null,
       "semi_finalists": [],
       "quarter_finalists": []
-    }
+    },
+    "rounds": [
+      {
+        "id": "r32",
+        "label": "Round of 32",
+        "matches": [
+          {
+            "home": "RSA",
+            "away": "CAN",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                3
+              ],
+              "Shaun": null,
+              "Dad": null,
+              "Claude": [
+                0,
+                2
+              ]
+            }
+          },
+          {
+            "home": "BRA",
+            "away": "JAP",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                2
+              ],
+              "Shaun": [
+                1,
+                0
+              ],
+              "Dad": [
+                3,
+                1
+              ],
+              "Claude": [
+                3,
+                0
+              ]
+            }
+          },
+          {
+            "home": "GER",
+            "away": "PAR",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                4,
+                0
+              ],
+              "Shaun": [
+                3,
+                0
+              ],
+              "Dad": [
+                2,
+                0
+              ],
+              "Claude": [
+                2,
+                1
+              ]
+            }
+          },
+          {
+            "home": "NED",
+            "away": "MAR",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                3,
+                2
+              ],
+              "Shaun": [
+                1,
+                2
+              ],
+              "Dad": [
+                2,
+                1
+              ],
+              "Claude": [
+                2,
+                1
+              ]
+            }
+          },
+          {
+            "home": "CIV",
+            "away": "NOR",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                0,
+                1
+              ],
+              "Shaun": null,
+              "Dad": [
+                0,
+                4
+              ],
+              "Claude": [
+                1,
+                2
+              ]
+            }
+          },
+          {
+            "home": "FRA",
+            "away": "SWE",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                2,
+                0
+              ],
+              "Shaun": [
+                3,
+                0
+              ],
+              "Dad": [
+                3,
+                0
+              ],
+              "Claude": [
+                3,
+                0
+              ]
+            }
+          },
+          {
+            "home": "MEX",
+            "away": "ECU",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                0,
+                1
+              ],
+              "Shaun": [
+                2,
+                1
+              ],
+              "Dad": [
+                2,
+                0
+              ],
+              "Claude": [
+                1,
+                2
+              ]
+            }
+          },
+          {
+            "home": "ENG",
+            "away": "CON",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                3,
+                0
+              ],
+              "Shaun": [
+                2,
+                0
+              ],
+              "Dad": [
+                3,
+                0
+              ],
+              "Claude": [
+                4,
+                0
+              ]
+            }
+          },
+          {
+            "home": "BEL",
+            "away": "SEN",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                2
+              ],
+              "Shaun": [
+                1,
+                0
+              ],
+              "Dad": [
+                3,
+                1
+              ],
+              "Claude": [
+                2,
+                1
+              ]
+            }
+          },
+          {
+            "home": "USA",
+            "away": "BOS",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                2
+              ],
+              "Shaun": [
+                2,
+                1
+              ],
+              "Dad": [
+                2,
+                1
+              ],
+              "Claude": [
+                2,
+                1
+              ]
+            }
+          },
+          {
+            "home": "SPA",
+            "away": "AUR",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                2,
+                0
+              ],
+              "Shaun": [
+                3,
+                0
+              ],
+              "Dad": [
+                2,
+                0
+              ],
+              "Claude": [
+                3,
+                0
+              ]
+            }
+          },
+          {
+            "home": "POR",
+            "away": "CRO",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                2
+              ],
+              "Shaun": [
+                1,
+                1
+              ],
+              "Dad": [
+                3,
+                2
+              ],
+              "Claude": [
+                2,
+                1
+              ]
+            }
+          },
+          {
+            "home": "SUI",
+            "away": "ALG",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                4,
+                1
+              ],
+              "Shaun": [
+                0,
+                0
+              ],
+              "Dad": [
+                4,
+                2
+              ],
+              "Claude": [
+                2,
+                0
+              ]
+            }
+          },
+          {
+            "home": "AUS",
+            "away": "EGY",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                3
+              ],
+              "Shaun": [
+                1,
+                2
+              ],
+              "Dad": [
+                1,
+                2
+              ],
+              "Claude": [
+                1,
+                2
+              ]
+            }
+          },
+          {
+            "home": "ARG",
+            "away": "CAP",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                4,
+                0
+              ],
+              "Shaun": [
+                4,
+                0
+              ],
+              "Dad": [
+                5,
+                0
+              ],
+              "Claude": [
+                4,
+                0
+              ]
+            }
+          },
+          {
+            "home": "COL",
+            "away": "GHA",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                1
+              ],
+              "Shaun": [
+                1,
+                0
+              ],
+              "Dad": [
+                2,
+                3
+              ],
+              "Claude": [
+                2,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "qf",
+        "label": "Quarter-finals",
+        "matches": [
+          {
+            "home": "CAN",
+            "away": "MAR",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                2
+              ],
+              "Shaun": [
+                0,
+                1
+              ],
+              "Dad": null,
+              "Claude": [
+                0,
+                2
+              ]
+            }
+          },
+          {
+            "home": "PAR",
+            "away": "FRA",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                0,
+                2
+              ],
+              "Shaun": [
+                0,
+                3
+              ],
+              "Dad": null,
+              "Claude": [
+                0,
+                3
+              ]
+            }
+          },
+          {
+            "home": "BRA",
+            "away": "NOR",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                2,
+                3
+              ],
+              "Shaun": [
+                2,
+                0
+              ],
+              "Dad": [
+                2,
+                1
+              ],
+              "Claude": [
+                2,
+                1
+              ]
+            }
+          },
+          {
+            "home": "MEX",
+            "away": "ENG",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                0
+              ],
+              "Shaun": [
+                1,
+                2
+              ],
+              "Dad": [
+                0,
+                1
+              ],
+              "Claude": [
+                0,
+                2
+              ]
+            }
+          },
+          {
+            "home": "POR",
+            "away": "SPA",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                2
+              ],
+              "Shaun": [
+                1,
+                3
+              ],
+              "Dad": [
+                0,
+                2
+              ],
+              "Claude": [
+                1,
+                2
+              ]
+            }
+          },
+          {
+            "home": "USA",
+            "away": "BEL",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                3,
+                0
+              ],
+              "Shaun": [
+                1,
+                2
+              ],
+              "Dad": [
+                2,
+                3
+              ],
+              "Claude": [
+                1,
+                2
+              ]
+            }
+          },
+          {
+            "home": "ARG",
+            "away": "EGY",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                3,
+                1
+              ],
+              "Shaun": [
+                4,
+                0
+              ],
+              "Dad": [
+                3,
+                0
+              ],
+              "Claude": [
+                3,
+                0
+              ]
+            }
+          },
+          {
+            "home": "SUI",
+            "away": "COL",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                0,
+                1
+              ],
+              "Shaun": [
+                1,
+                2
+              ],
+              "Dad": [
+                2,
+                1
+              ],
+              "Claude": [
+                1,
+                2
+              ]
+            }
+          }
+        ]
+      }
+    ]
   }
 }

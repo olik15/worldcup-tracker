@@ -572,6 +572,86 @@ main { width: 100%; }
 }
 .po-scoring-item strong { color: var(--gold); font-weight: 500; }
 
+/* ── Playoff round match tables ─────────────────────── */
+.po-round-section { margin-top: 48px; }
+
+.po-round-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 4px;
+}
+
+.po-match-row {
+  border-top: 1px solid var(--rule);
+  padding: 20px 0 16px;
+}
+.po-match-row:last-child { border-bottom: 1px solid var(--rule); }
+
+.po-match-teams {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.po-team {
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+.po-vs {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.po-match-result {
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.po-match-result.tbd {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.po-match-preds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.po-mpred {
+  min-width: 90px;
+  flex: 1;
+  padding-right: 12px;
+}
+.po-mpred-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+.po-mpred-val {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: -0.3px;
+  line-height: 1;
+}
+
 /* ── Mobile ─────────────────────────────────────────── */
 @media (max-width: 760px) {
   .page { padding: 28px 24px 64px; gap: 36px; }
