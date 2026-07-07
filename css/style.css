@@ -572,6 +572,117 @@ main { width: 100%; }
 }
 .po-scoring-item strong { color: var(--gold); font-weight: 500; }
 
+/* ── Playoff score chart ────────────────────────────── */
+.po-scoreboard {
+  background: var(--paper);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin: 40px 0;
+}
+
+.po-sb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--bg);
+}
+
+.po-sb-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.po-sb-legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.po-sb-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.po-sb-dot--r32 { background: var(--water); }
+.po-sb-dot--qf  { background: var(--gold); }
+
+.po-sb-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid var(--bg);
+}
+
+.po-sb-rank {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.po-sb-name {
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: -0.4px;
+  flex: 0 0 90px;
+}
+
+.po-sb-bar-wrap { flex: 1; }
+
+.po-sb-track {
+  background: var(--bg);
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.po-sb-fill {
+  display: flex;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.po-sb-seg--r32 { background: var(--water); }
+.po-sb-seg--qf  { background: var(--gold); }
+
+.po-sb-breakdown {
+  display: flex;
+  gap: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.po-sb-breakdown strong { color: var(--ink); font-weight: 500; }
+
+.po-sb-total {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -1.2px;
+  color: var(--accent);
+  min-width: 52px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
 /* ── Playoff round match tables ─────────────────────── */
 .po-round-section { margin-top: 48px; }
 

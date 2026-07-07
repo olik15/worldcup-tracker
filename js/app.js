@@ -320,6 +320,35 @@ function renderPlayoffs(data) {
   const semisResult = results.semi_finalists || [];
   const qfsResult = results.quarter_finalists || [];
 
+  // Calculate match pts per player per round
+  function calcPoMatchScores() {
+    const scores = {};
+    players.forEach(pid => { scores[pid] = { total: 0, rounds: {} }; });
+    (po.rounds || []).forEach(round => {
+      players.forEach(pid => {
+        let rpts = 0;
+        round.matches.forEach(match => {
+          if (!match.result) return;
+          const pred = match.preds[pid];
+          if (!pred) return;
+          const r = match.result;
+          const realWin = match.winner || (r[0] > r[1] ? 'home' : r[0] < r[1] ? 'away' : 'draw');
+          const predWin = pred[0] > pred[1] ? 'home' : pred[0] < pred[1] ? 'away' : 'draw';
+          if (pred[0] === r[0] && pred[1] === r[1]) rpts += 3;
+          else if (predWin === realWin) rpts += 1;
+        });
+        scores[pid].rounds[round.id] = rpts;
+        scores[pid].total += rpts;
+      });
+    });
+    return scores;
+  }
+
+  const poScores = calcPoMatchScores();
+  const sortedByScore = [...players].sort((a, b) => poScores[b].total - poScores[a].total);
+  const maxScore = Math.max(...players.map(pid => poScores[pid].total), 1);
+  const hasRounds = (po.rounds || []).length > 0;
+
   let html = `
     <div class="po-header">
       <div class="po-header-label">Knockout stage predictions</div>
@@ -331,8 +360,48 @@ function renderPlayoffs(data) {
         <div class="po-scoring-item"><strong>5</strong> Semi-finalist</div>
         <div class="po-scoring-item"><strong>2</strong> Quarter-finalist</div>
       </div>
-    </div>
-    <div class="po-grid">`;
+    </div>`;
+
+  if (hasRounds) {
+    html += `<div class="po-scoreboard">
+      <div class="po-sb-header">
+        <div class="po-sb-title">Match score</div>
+        <div class="po-sb-legend">
+          <span class="po-sb-dot po-sb-dot--r32"></span>R32
+          <span class="po-sb-dot po-sb-dot--qf"></span>QF
+        </div>
+      </div>`;
+
+    sortedByScore.forEach((pid, i) => {
+      const sc = poScores[pid];
+      const r32 = sc.rounds['r32'] || 0;
+      const qf  = sc.rounds['qf']  || 0;
+      const r32pct = (r32 / maxScore * 100).toFixed(1);
+      const qfpct  = (qf  / maxScore * 100).toFixed(1);
+      const rank = String(i + 1).padStart(2, '0');
+      html += `<div class="po-sb-row">
+        <div class="po-sb-rank">${rank}</div>
+        <div class="po-sb-name">${pid}</div>
+        <div class="po-sb-bar-wrap">
+          <div class="po-sb-track">
+            <div class="po-sb-fill">
+              <div class="po-sb-seg po-sb-seg--r32" style="width:${r32pct}%"></div>
+              <div class="po-sb-seg po-sb-seg--qf"  style="width:${qfpct}%"></div>
+            </div>
+          </div>
+          <div class="po-sb-breakdown">
+            <span>R32 <strong>${r32}</strong></span>
+            <span>QF <strong>${qf}</strong></span>
+          </div>
+        </div>
+        <div class="po-sb-total">${sc.total}</div>
+      </div>`;
+    });
+
+    html += `</div>`;
+  }
+
+  html += `<div class="po-grid">`;
 
   players.forEach(pid => {
     const preds = po.predictions[pid] || {};
