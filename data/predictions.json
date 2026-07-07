@@ -2952,7 +2952,10 @@
           {
             "home": "ARG",
             "away": "EGY",
-            "result": null,
+            "result": [
+              3,
+              2
+            ],
             "preds": {
               "Oliver": [
                 3,
@@ -2970,7 +2973,8 @@
                 3,
                 0
               ]
-            }
+            },
+            "winner": "home"
           },
           {
             "home": "SUI",
