@@ -2979,7 +2979,10 @@
           {
             "home": "SUI",
             "away": "COL",
-            "result": null,
+            "result": [
+              4,
+              3
+            ],
             "preds": {
               "Oliver": [
                 0,
