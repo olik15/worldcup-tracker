@@ -101,6 +101,12 @@ def main():
     # Match lookup keyed by (home_code, away_code)
     match_lookup = {(m['home'], m['away']): m for m in data['matches']}
 
+    # Playoff match lookup across all rounds
+    po_match_lookup = {}
+    for rnd in data.get('playoffs', {}).get('rounds', []):
+        for m in rnd['matches']:
+            po_match_lookup[(m['home'], m['away'])] = m
+
     changed = False
     unmatched = []
 
@@ -120,10 +126,17 @@ def main():
         h_codes = name_to_codes.get(h_norm, [])
         a_codes = name_to_codes.get(a_norm, [])
 
+        # Winner info (for knockout pens/ET)
+        winner_raw = am.get('score', {}).get('winner', '')
+        winner = 'home' if winner_raw == 'HOME_TEAM' else ('away' if winner_raw == 'AWAY_TEAM' else None)
+
         matched = False
         for hc in h_codes:
+            if matched:
+                break
             for ac in a_codes:
-                # Try normal order
+                if matched:
+                    break
                 if (hc, ac) in match_lookup:
                     m = match_lookup[(hc, ac)]
                     new = [hg, ag]
@@ -132,13 +145,33 @@ def main():
                         print(f"  Updated: {hc} {hg}–{ag} {ac}")
                         changed = True
                     matched = True
-                # Try swapped order (our home/away might differ from API)
                 elif (ac, hc) in match_lookup:
                     m = match_lookup[(ac, hc)]
-                    new = [ag, hg]  # swap scores too
+                    new = [ag, hg]
                     if m['result'] != new:
                         m['result'] = new
                         print(f"  Updated (swapped): {ac} {ag}–{hg} {hc}")
+                        changed = True
+                    matched = True
+                elif (hc, ac) in po_match_lookup:
+                    m = po_match_lookup[(hc, ac)]
+                    new = [hg, ag]
+                    if m['result'] != new or m.get('winner') != winner:
+                        m['result'] = new
+                        if winner:
+                            m['winner'] = winner
+                        print(f"  PO Updated: {hc} {hg}–{ag} {ac} (winner: {winner})")
+                        changed = True
+                    matched = True
+                elif (ac, hc) in po_match_lookup:
+                    m = po_match_lookup[(ac, hc)]
+                    new = [ag, hg]
+                    flipped = 'away' if winner == 'home' else ('home' if winner == 'away' else None)
+                    if m['result'] != new or m.get('winner') != flipped:
+                        m['result'] = new
+                        if flipped:
+                            m['winner'] = flipped
+                        print(f"  PO Updated (swapped): {ac} {ag}–{hg} {hc} (winner: {flipped})")
                         changed = True
                     matched = True
 

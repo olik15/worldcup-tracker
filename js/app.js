@@ -84,10 +84,14 @@ function matchPts(match, pid) {
 
 function calcTotals(data) {
   return Object.fromEntries(data.players.map(({ id }) => {
-    let mp = 0;
-    data.matches.forEach(m => { const pts = matchPts(m, id); if (pts !== null) mp += pts; });
+    let mp = 0, scored = 0;
+    data.matches.forEach(m => {
+      const pts = matchPts(m, id);
+      if (pts !== null) { mp += pts; scored++; }
+    });
+    const avg = scored > 0 ? (mp / scored).toFixed(2) : null;
     const bp = data.bonus.scores[id];
-    return [id, { mp, bp, total: mp + (bp ?? 0) }];
+    return [id, { mp, bp, total: mp + (bp ?? 0), avg, scored }];
   }));
 }
 
@@ -101,17 +105,19 @@ function renderLeaderboard(data) {
   let html = `<table class="lb-table">
     <thead><tr>
       <th></th><th>Player</th>
-      <th>Matches</th><th>Bonus</th><th style="text-align:right">Total</th>
+      <th>Matches</th><th>Avg/game</th><th>Bonus</th><th style="text-align:right">Total</th>
     </tr></thead><tbody>`;
 
   sorted.forEach(({ id }, i) => {
-    const { mp, bp, total } = totals[id];
+    const { mp, bp, total, avg } = totals[id];
     const bpStr = bp !== null && bp !== undefined ? bp : '—';
+    const avgStr = avg !== null ? avg : '—';
     const rank = String(i + 1).padStart(2, '0');
     html += `<tr>
       <td class="lb-rank">${rank}</td>
       <td class="lb-name">${id}</td>
       <td class="lb-sub">${mp} pts</td>
+      <td class="lb-sub lb-avg">${avgStr}</td>
       <td class="lb-sub">${bpStr}</td>
       <td class="lb-total">${total}</td>
     </tr>`;
