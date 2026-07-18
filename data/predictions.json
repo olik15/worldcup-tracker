@@ -2790,8 +2790,8 @@
         ]
       },
       {
-        "id": "qf",
-        "label": "Quarter-finals",
+        "id": "r16",
+        "label": "Round of 16",
         "matches": [
           {
             "home": "CAN",
@@ -3002,6 +3002,144 @@
               ]
             },
             "winner": "home"
+          }
+        ]
+      },
+      {
+        "id": "qf",
+        "label": "Quarter-finals",
+        "matches": [
+          {
+            "home": "FRA",
+            "away": "MAR",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                2
+              ],
+              "Shaun": [
+                2,
+                0
+              ],
+              "Dad": null,
+              "Claude": [
+                2,
+                0
+              ]
+            }
+          },
+          {
+            "home": "SPA",
+            "away": "BEL",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                2,
+                1
+              ],
+              "Shaun": [
+                3,
+                0
+              ],
+              "Dad": null,
+              "Claude": [
+                2,
+                1
+              ]
+            }
+          },
+          {
+            "home": "ENG",
+            "away": "NOR",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                0,
+                3
+              ],
+              "Shaun": [
+                3,
+                1
+              ],
+              "Dad": null,
+              "Claude": [
+                2,
+                1
+              ]
+            }
+          },
+          {
+            "home": "ARG",
+            "away": "SUI",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                2,
+                1
+              ],
+              "Shaun": [
+                1,
+                0
+              ],
+              "Dad": null,
+              "Claude": [
+                2,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "sf",
+        "label": "Semi-finals",
+        "matches": [
+          {
+            "home": "FRA",
+            "away": "SPA",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                1,
+                2
+              ],
+              "Shaun": [
+                0,
+                1
+              ],
+              "Dad": [
+                3,
+                2
+              ],
+              "Claude": [
+                2,
+                1
+              ]
+            }
+          },
+          {
+            "home": "ARG",
+            "away": "ENG",
+            "result": null,
+            "preds": {
+              "Oliver": [
+                2,
+                1
+              ],
+              "Shaun": [
+                0,
+                2
+              ],
+              "Dad": [
+                2,
+                1
+              ],
+              "Claude": [
+                1,
+                2
+              ]
+            }
           }
         ]
       }

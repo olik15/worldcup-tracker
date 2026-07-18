@@ -616,7 +616,9 @@ main { width: 100%; }
   margin-right: 4px;
 }
 .po-sb-dot--r32 { background: var(--water); }
+.po-sb-dot--r16 { background: #6baed6; }
 .po-sb-dot--qf  { background: var(--gold); }
+.po-sb-dot--sf  { background: #e07b39; }
 
 .po-sb-row {
   display: flex;
@@ -660,7 +662,9 @@ main { width: 100%; }
 }
 
 .po-sb-seg--r32 { background: var(--water); }
+.po-sb-seg--r16 { background: #6baed6; }
 .po-sb-seg--qf  { background: var(--gold); }
+.po-sb-seg--sf  { background: #e07b39; }
 
 .po-sb-breakdown {
   display: flex;

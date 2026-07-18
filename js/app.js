@@ -368,16 +368,22 @@ function renderPlayoffs(data) {
         <div class="po-sb-title">Match score</div>
         <div class="po-sb-legend">
           <span class="po-sb-dot po-sb-dot--r32"></span>R32
+          <span class="po-sb-dot po-sb-dot--r16"></span>R16
           <span class="po-sb-dot po-sb-dot--qf"></span>QF
+          <span class="po-sb-dot po-sb-dot--sf"></span>SF
         </div>
       </div>`;
 
     sortedByScore.forEach((pid, i) => {
       const sc = poScores[pid];
       const r32 = sc.rounds['r32'] || 0;
+      const r16 = sc.rounds['r16'] || 0;
       const qf  = sc.rounds['qf']  || 0;
+      const sf  = sc.rounds['sf']  || 0;
       const r32pct = (r32 / maxScore * 100).toFixed(1);
+      const r16pct = (r16 / maxScore * 100).toFixed(1);
       const qfpct  = (qf  / maxScore * 100).toFixed(1);
+      const sfpct  = (sf  / maxScore * 100).toFixed(1);
       const rank = String(i + 1).padStart(2, '0');
       html += `<div class="po-sb-row">
         <div class="po-sb-rank">${rank}</div>
@@ -386,12 +392,16 @@ function renderPlayoffs(data) {
           <div class="po-sb-track">
             <div class="po-sb-fill">
               <div class="po-sb-seg po-sb-seg--r32" style="width:${r32pct}%"></div>
+              <div class="po-sb-seg po-sb-seg--r16" style="width:${r16pct}%"></div>
               <div class="po-sb-seg po-sb-seg--qf"  style="width:${qfpct}%"></div>
+              <div class="po-sb-seg po-sb-seg--sf"  style="width:${sfpct}%"></div>
             </div>
           </div>
           <div class="po-sb-breakdown">
             <span>R32 <strong>${r32}</strong></span>
+            <span>R16 <strong>${r16}</strong></span>
             <span>QF <strong>${qf}</strong></span>
+            <span>SF <strong>${sf}</strong></span>
           </div>
         </div>
         <div class="po-sb-total">${sc.total}</div>
