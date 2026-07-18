@@ -2356,8 +2356,22 @@
     "results": {
       "champion": null,
       "runner_up": null,
-      "semi_finalists": [],
-      "quarter_finalists": []
+      "semi_finalists": [
+        "France",
+        "Spain",
+        "Argentina",
+        "England"
+      ],
+      "quarter_finalists": [
+        "France",
+        "Morocco",
+        "Spain",
+        "Belgium",
+        "England",
+        "Norway",
+        "Argentina",
+        "Switzerland"
+      ]
     },
     "rounds": [
       {
